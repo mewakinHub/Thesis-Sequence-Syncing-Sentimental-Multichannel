@@ -1,0 +1,26 @@
+# Python and pip version specifications (comments for reference)
+# python==3.9.16
+# pip==21.3.1
+
+PyYAML==6.0.1
+ultralytics==8.0.145 # has matplotlib as dependency
+opencv-python
+opencv-contrib-python
+numpy
+pandas
+pillow
+pyyaml
+scipy
+# scikit-image==0.19.3 # 
+# scikit-learn==0.21.1 # conda call instead
+
+# The main issue is that matplotlib requires a C++ compiler for installation, and this compiler is typically provided by Visual Studio on Windows
+# Instead of compiling matplotlib from source, you can use a pre-compiled version. This is often easier and avoids the need for Visual Studio. You can use conda to install matplotlib, which provides pre-compiled binaries.
+# matplotlib # being pulled in indirectly.
+
+
+# Uncomment the lines below if you want to use these packages
+# filterpy==1.4.5 # For Kalman filter used in SORT and Deep SORT
+# tensorflow  # Optional, required for Deep SORT's deep appearance descriptor
+
+deepface

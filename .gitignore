@@ -1,0 +1,36 @@
+# Ignore all .log files
+/run_log.txt
+/setup_log.txt 
+/temp_output.txt
+
+# # Ignore the YOLO model weights
+assets/models/best.pt
+
+# # outputs folder
+outputs/
+
+# Standard Python ignores
+*.py[cod]
+__pycache__/
+*.pyc
+
+# Jupyter notebook checks
+.ipynb_checkpoints
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Virtual environment
+venv/
+*.venv
+env/
+
+# Ignore Python build directory
+build/
+dist/
+
