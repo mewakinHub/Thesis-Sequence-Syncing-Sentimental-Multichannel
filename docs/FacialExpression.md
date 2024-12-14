@@ -176,7 +176,6 @@ DETAIL: [../facial_expression/FERPlus/](../facial_expression/FERPlus/README.md)
 - multiple individual image folder
 - consecutive frame of video
 
-
 #### 2. OpenFace
 For OpenFace, you **don’t need to manually divide expressions into separate segments** before inputting the video. OpenFace is designed to handle and analyze continuous sequences of facial expressions and will track the changes automatically over time. Here’s why and how it works:
 

@@ -1,30 +1,30 @@
-Accuracy: 14.29%
-Image, Ground Truth, Prediction, Correct
-frame_0000.jpg, Angry, Neutral, False
-frame_0001.jpg, Neutral, Fear, False
-frame_0002.jpg, Sad, Neutral, False
-frame_0003.jpg, Neutral, Neutral, True
-frame_0004.jpg, Fear, Neutral, False
-frame_0005.jpg, Happy, Fear, False
-frame_0006.jpg, Angry, Fear, False
-frame_0007.jpg, Neutral, Fear, False
-frame_0008.jpg, Neutral, Neutral, True
-frame_0009.jpg, Happy, Neutral, False
-frame_0010.jpg, Surprise, Fear, False
-frame_0011.jpg, Fear, Fear, True
-frame_0012.jpg, Angry, Neutral, False
-frame_0013.jpg, Neutral, Neutral, True
-frame_0014.jpg, Sad, Neutral, False
-frame_0015.jpg, Happy, Neutral, False
-frame_0016.jpg, Unknown, Fear, False
-frame_0017.jpg, Unknown, Fear, False
-frame_0018.jpg, Unknown, Fear, False
-frame_0019.jpg, Unknown, Fear, False
-frame_0020.jpg, Unknown, Neutral, False
-frame_0021.jpg, Unknown, Neutral, False
-frame_0022.jpg, Unknown, Neutral, False
-frame_0023.jpg, Unknown, Neutral, False
-frame_0024.jpg, Unknown, Fear, False
-frame_0025.jpg, Unknown, Neutral, False
-frame_0026.jpg, Unknown, Fear, False
-frame_0027.jpg, Unknown, Fear, False
+Accuracy: 21.43%
+Image, Ground Truth, Prediction, Confidence, Correct
+frame_0000.jpg, Angry, Neutral, 0.29, False
+frame_0001.jpg, Angry, Fear, 0.27, False
+frame_0002.jpg, Neutral, Neutral, 0.25, True
+frame_0003.jpg, Disgust, Neutral, 0.25, False
+frame_0004.jpg, Angry, Neutral, 0.26, False
+frame_0005.jpg, Angry, Fear, 0.25, False
+frame_0006.jpg, Neutral, Fear, 0.27, False
+frame_0007.jpg, Angry, Fear, 0.26, False
+frame_0008.jpg, Neutral, Neutral, 0.25, True
+frame_0009.jpg, Neutral, Neutral, 0.25, True
+frame_0010.jpg, Angry, Fear, 0.27, False
+frame_0011.jpg, Angry, Fear, 0.26, False
+frame_0012.jpg, Neutral, Neutral, 0.28, True
+frame_0013.jpg, Disgust, Neutral, 0.28, False
+frame_0014.jpg, Neutral, Neutral, 0.27, True
+frame_0015.jpg, Angry, Neutral, 0.25, False
+frame_0016.jpg, Angry, Fear, 0.26, False
+frame_0017.jpg, Surprise, Fear, 0.29, False
+frame_0018.jpg, Sad, Fear, 0.25, False
+frame_0019.jpg, Neutral, Fear, 0.26, False
+frame_0020.jpg, Surprise, Neutral, 0.26, False
+frame_0021.jpg, Sad, Neutral, 0.26, False
+frame_0022.jpg, Neutral, Neutral, 0.24, True
+frame_0023.jpg, Surprise, Neutral, 0.24, False
+frame_0024.jpg, Surprise, Fear, 0.24, False
+frame_0025.jpg, Surprise, Neutral, 0.27, False
+frame_0026.jpg, Surprise, Fear, 0.28, False
+frame_0027.jpg, Happy, Fear, 0.26, False

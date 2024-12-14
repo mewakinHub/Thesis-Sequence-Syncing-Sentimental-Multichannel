@@ -22,11 +22,6 @@
 เพราะงั้นหลักๆก็แยกกันเขียนโค้ดของแต่ละ channel ทิ้งไว้ก่อนก็ได้ ละวันศุกร์มาเอาสอง result นี้ sync กัน ออกแบบทั้งสมการละโค้ดเลย ต้องการความคิดสร้างสรรค์
 
 
-
-
-
-
-
 ---
 
 my current idea: [PDF: Syncing](./Syncing.pdf)
@@ -34,3 +29,49 @@ my current idea: [PDF: Syncing](./Syncing.pdf)
 NOTE:
 พาร์ทหั่นสคริปต์อะเตอร์ ก็แค่หั่นวิดีโอก่อน แล้วค่อยเอาวิดีโอไป extract  transcript from that trimmed video แค่นั้นเลย
 ไอ้ condition ยังมีแค่ ประชด เพราะยังไม่ได้คิดเพิ่ม ยังไม่เข้าใจอารมณ์มนุษย์เพียงพอ ยังไม่บรรลุ
+
+---
+
+## The Universal Format:
+[
+    {
+        "partition": "0-6s",
+        "transcript": {
+            "text": "Mitch was in his final semester at a college in Louisiana when he met another senior, a wonderful",
+            "confidence": 0.9222
+        },
+        "facial_expression": [
+            {"frame": "0000.jpg", "emotion": "Neutral", "confidence": 0.87},
+            {"frame": "0001.jpg", "emotion": "Angry", "confidence": 0.78},
+            {"frame": "0002.jpg", "emotion": "Neutral", "confidence": 0.85},
+            {"frame": "0003.jpg", "emotion": "Sad", "confidence": 0.72},
+            {"frame": "0004.jpg", "emotion": "Happy", "confidence": 0.81},
+            {"frame": "0005.jpg", "emotion": "Neutral", "confidence": 0.89}
+        ],
+        "voice_tone": [
+            {"time": 0.0, "emotion": "Calm", "confidence": 0.88},
+            {"time": 2.0, "emotion": "Happy", "confidence": 0.91},
+            {"time": 4.0, "emotion": "Neutral", "confidence": 0.80}
+        ]
+    },
+    {
+        "partition": "7-12s",
+        "transcript": {
+            "text": "young lady named Kayla.",
+            "confidence": 0.85
+        },
+        "facial_expression": [
+            {"frame": "0007.jpg", "emotion": "Neutral", "confidence": 0.84},
+            {"frame": "0008.jpg", "emotion": "Angry", "confidence": 0.76},
+            {"frame": "0009.jpg", "emotion": "Neutral", "confidence": 0.81},
+            {"frame": "0010.jpg", "emotion": "Sad", "confidence": 0.73},
+            {"frame": "0011.jpg", "emotion": "Happy", "confidence": 0.79},
+            {"frame": "0012.jpg", "emotion": "Neutral", "confidence": 0.90}
+        ],
+        "voice_tone": [
+            {"time": 7.0, "emotion": "Calm", "confidence": 0.88},
+            {"time": 9.0, "emotion": "Happy", "confidence": 0.91},
+            {"time": 11.0, "emotion": "Neutral", "confidence": 0.80}
+        ]
+    }
+]

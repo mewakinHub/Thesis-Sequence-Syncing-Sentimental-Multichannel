@@ -32,14 +32,24 @@ def preprocess_image(image_path):
     image = Image.open(image_path).convert("RGB")
     return transform(image).unsqueeze(0)
 
-def predict_emotion(image_path, model):
-    """Predict the emotion for a single image."""
+# def predict_emotion(image_path, model):
+#     """Predict the emotion for a single image."""
+#     input_tensor = preprocess_image(image_path)
+#     with torch.no_grad():
+#         output = model(input_tensor)
+#        # probabilities = torch.softmax(output, dim=1) # confidence scores
+#       # max_prob, predicted_idx = torch.max(probabilities, 1)
+#     return LABELS[predicted_idx.item()]
+
+def predict_emotion_with_confidence(image_path, model):
+    """Predict the emotion and confidence for a single image."""
     input_tensor = preprocess_image(image_path)
     with torch.no_grad():
         output = model(input_tensor)
-    _, predicted_idx = torch.max(output, 1)
-    return LABELS[predicted_idx.item()]
-
+        probabilities = torch.softmax(output, dim=1) # confidence scores
+        max_prob, predicted_idx = torch.max(probabilities, 1)
+    return LABELS[predicted_idx.item()], max_prob.item()
+   
 def parse_ground_truth(file_name):
     """Extract ground truth emotion from the file name."""
     label_code = file_name.split('.')[1][:2]
@@ -65,19 +75,23 @@ def validate_folder(folder_path, model, output_file, json_labels=None):
             img_path = os.path.join(folder_path, img_name)
             # Use JSON labels if available, otherwise parse from the file name
             ground_truth = json_labels.get(img_name, "Unknown") if json_labels else parse_ground_truth(img_name)
-            predicted_emotion = predict_emotion(img_path, model)
+            # predicted_emotion = predict_emotion(img_path, model)
+            predicted_emotion, confidence = predict_emotion_with_confidence(img_path, model)
 
             is_correct = (predicted_emotion == ground_truth)
             correct_predictions += int(is_correct)
             total_images += 1
-            results.append((img_name, ground_truth, predicted_emotion, is_correct))
+            # results.append((img_name, ground_truth, predicted_emotion, is_correct))
+            results.append((img_name, ground_truth, predicted_emotion, confidence, is_correct))
 
     accuracy = (correct_predictions / total_images) * 100 if total_images > 0 else 0
     with open(output_file, "w") as f:
         f.write(f"Accuracy: {accuracy:.2f}%\n")
-        f.write("Image, Ground Truth, Prediction, Correct\n")
-        for img_name, ground_truth, predicted_emotion, is_correct in results:
-            f.write(f"{img_name}, {ground_truth}, {predicted_emotion}, {is_correct}\n")
+        f.write("Image, Ground Truth, Prediction, Confidence, Correct\n")
+        for img_name, ground_truth, predicted_emotion, confidence, is_correct in results:
+            f.write(f"{img_name}, {ground_truth}, {predicted_emotion}, {confidence:.2f}, {is_correct}\n")
+        # for img_name, ground_truth, predicted_emotion, is_correct in results:
+        #     f.write(f"{img_name}, {ground_truth}, {predicted_emotion}, {is_correct}\n")
     print(f"Results saved to {output_file}")
     print(f"Validation Accuracy: {accuracy:.2f}%")
 
