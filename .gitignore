@@ -5,6 +5,8 @@
 
 # # Ignore the YOLO model weights
 assets/models/best.pt
+*.pt
+*.pdf
 
 # # outputs folder
 outputs/
