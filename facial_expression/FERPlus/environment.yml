@@ -1,0 +1,13 @@
+name: ferplus
+channels:
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.9
+  - pytorch
+  - torchvision
+  - opencv
+  - pip
+  - pip:
+      - pillow
+      - matplotlib
