@@ -1,44 +1,47 @@
-import torch
-from torchvision import transforms
-from PIL import Image
 import os
 import argparse
-import csv
+from facetorch.core import FaceAnalyzer
 
-def preprocess_image(image_path):
-    preprocess = transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ])
-    img = Image.open(image_path)
-    return preprocess(img).unsqueeze(0)
+def analyze_image(image_path, analyzer):
+    """
+    Analyze a single image and print the predicted emotion.
+    """
+    image_data = analyzer.run(path_image=image_path)
+    if len(image_data.faces) > 0:
+        predicted_emotion = image_data.faces[0].preds["emotion"].label
+        print(f"Emotion for {image_path}: {predicted_emotion}")
+    else:
+        print(f"No face detected in {image_path}")
+        predicted_emotion = "No face detected"
+    return predicted_emotion
 
-def analyze_emotions(input_folder, model_path, output_csv):
-    model = torch.load(model_path)
-    model.eval()
-
+def analyze_folder(folder_path, analyzer, output_file):
+    """
+    Analyze all images in a folder and save results to a file.
+    """
     results = []
-    for img_file in sorted(os.listdir(input_folder)):
-        img_path = os.path.join(input_folder, img_file)
-        input_tensor = preprocess_image(img_path)
-        
-        with torch.no_grad():
-            output = model(input_tensor)
-            emotion_scores = output.numpy().tolist()[0]
-            results.append([img_file] + emotion_scores)
+    for img_name in sorted(os.listdir(folder_path)):
+        if img_name.endswith(".jpg"):
+            img_path = os.path.join(folder_path, img_name)
+            predicted_emotion = analyze_image(img_path, analyzer)
+            results.append((img_name, predicted_emotion))
 
-    with open(output_csv, 'w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(["Frame"] + [f"Emotion_{i}" for i in range(len(emotion_scores))])
-        writer.writerows(results)
-    print(f"Emotion analysis results saved to {output_csv}")
+    with open(output_file, "w") as f:
+        for img_name, predicted_emotion in results:
+            f.write(f"{img_name}: {predicted_emotion}\n")
+    print(f"Results saved to {output_file}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input", required=True, help="Path to folder with input images")
-    parser.add_argument("--model", required=True, help="Path to FER+ model (.pt)")
-    parser.add_argument("--output", required=True, help="Path to output CSV")
+    parser = argparse.ArgumentParser(description="Facial Expression Analysis")
+    parser.add_argument("--input", required=True, help="Path to input image or folder")
+    parser.add_argument("--output", required=True, help="Path to save the results")
+    parser.add_argument("--config", required=True, help="Path to configuration YAML file")
     args = parser.parse_args()
 
-    analyze_emotions(args.input, args.model, args.output)
+    # Initialize analyzer
+    analyzer = FaceAnalyzer(cfg=args.config)
+
+    if os.path.isdir(args.input):
+        analyze_folder(args.input, analyzer, args.output)
+    else:
+        analyze_image(args.input, analyzer)

@@ -1,6 +1,0 @@
-RTSP_URL: 'rtsp://localhost:8554/teststream'
-MODEL_PATH: 'assets/models/best.pt'
-FRAME_COUNT:  # Leave this blank to process until manually stopped
-
-# RTSP_URL : 'rtsp://0.0.0.0:8554/teststream' -> not work for some reason!?
-# FRAME_COUNT: 2000  # for testing if it work or not on mockup rtsp stream

@@ -1,0 +1,46 @@
+Project Overview
+
+Abstract
+This project introduces a sentiment analysis system that integrates three distinct data channels: facial expression, voice tone, and speech transcription. Each channel independently analyzes sentiment, classifying emotions as either positive or negative. This multi-channel approach seeks to improve upon traditional sentiment analysis methods, offering a more comprehensive understanding of human emotions compared to single-channel techniques, through preprocessing the outputs and applying a voting mechanism.
+
+Introduction  
+The ability to accurately detect and understand human emotions is a key factor in various technological applications, virtual avatars that dynamically adjust their facial expressions to match the user’s emotions, systems that monitor mental health, and solutions for enhancing customer service experiences.
+Historically, sentiment analysis systems have primarily relied on a single data channel, such as textual data, to interpret and classify emotional states. However, human emotions are complex, and expressed through a combination of verbal and non-verbal cues. Traditional single-channel sentiment analysis may miss subtle emotional signals, failing to accurately reflect a person's true emotional state. For instance, someone might feel sad but mask it, or sound angry but be joking. Therefore, it is essential to consider not just the content of spoken words but also the tone of voice and facial expressions. Each of these channels provides distinct insights into emotional states:
+Facial recognition detects visual cues that often convey emotions more immediately and universally than verbal expression.
+Speech transcription provides semantic content, allowing for analysis of word choice and linguistic patterns associated with different emotions.
+Voice tone analysis captures vocal features that can reveal emotions not explicitly stated in words.
+For example, while text-based systems may be able to interpret the meaning behind words, they might miss the nuances conveyed through the speaker's tone or facial expressions. As noted by Nandwani and Verma in their 2021 paper, “A review on sentiment analysis and emotion detection from text”, “… in some cases, machine learning models fail to extract some implicit features or aspects of the text …”, leading to inaccurate sentiment result when solely relying on textual data.
+This limitation has motivated our interest in multi-channel sentiment analysis project that integrates all the data channels into a unified system through a voting mechanism, overcoming the constraints of single-channel methods and enhancing the reliability of emotion detection in various applications.
+
+
+this is the report so far of my thesis project: "multi-channel sentiment analysis"
+i want you to help integrate the following points into the introduction and abstract (remember, dont add too much verbosity)
+
+"multimodal | early approach (inside neural network)
+technical problem
+noise
+missing data leads to bigger error -> fallback triggers them to detect again (e.g., the specific channel has an extremely low confidence score)
+hard to understand neural network (black box)
+we are XAI, so people can develop their own model based on our logic for future research! (we analyze human emotion in more depth!)
+human understanding problem
+there are many edge cases of conflict emotion between multiple channels
+use case: should use multimodal that has already been researched and public for better accuracy because that thing is called State of the Art(state of the art is obviously better than ours and the current world rn)
+
+Voting Mechanism | late approach (outside neural network)
+detect the conflict case:
+use our voting mechanism (e.g., weight between each channel)
+bagging or boosting assemble technique
+	NOTE: The edge case algorithm for sarcasm will use the model result to see if it has any conflict between the results of each model (e.g., voice tone != face expression -> and go into more detail for each possible emotion)
+
+KEY NOTE: multimodal is still 2 channels or 3 channels with a bad understanding of 
+human expression, so State of the art still considered as bad and hard right now, so if we even make it easier just only a bit by handling and researching on deeper of human emotion by just create logic for them, I think that is much much more impact right now, but we still consider to the custom multimodal state of the art if we have enough time
+
+Consideration: we might not actually create a new Neural Network, but we might customize the state of the art for better human emotion understanding by changing the location or connecting those nodes inside those multiple models.
+
+" 
+ 
+basically, the traditional method for sentiment analysis is multimodal / early approach, and our project will be an alternative method which is voting mechanism.
+
+also now change "traditional single-channel sentiment analysis methods" in the original into "single channel sentiment analysis". refer to the multimodal method as traditional multimodal approach.
+
+remember, our method is NOT upgrade nor downgrade, just an alternative, more lightweight and explainable method .

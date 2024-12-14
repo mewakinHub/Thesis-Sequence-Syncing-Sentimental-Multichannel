@@ -12,7 +12,7 @@ more: ละก็บอกจารเพิ่มว่าพวก multi-moda
 - การเริ่มต้นทำตรงนี้อาจจะช่วยเปิดเส้นทางการทำ multi-channel มากขึ้น
 
 **ADVANTAGE 2**: Mostly good/steady developed model are black block, which is not the open-source model, so it’ll be very hard to do multi-modal on something because we need to ask for permission to access that whole model. That’s why just use the result for syncing as a post process is the best choice for now!
-SUM: normal people can’t afford to do it!
+SUM: Normal people can’t access to those model that's not open-source to build multi-modal. For example, some model on-line via api, might only be able to use it as black box service, but no access to source code!
 
 
 **ADVANTAGE3**: Multi-modal’s not flexible to change model for each channel if the state-of-art model change. We use Post processing like voting mechanism, so even if we change those model form each channel to match the situation, we still be able to keep process.

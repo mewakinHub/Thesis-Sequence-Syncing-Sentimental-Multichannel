@@ -171,6 +171,7 @@ git clone https://github.com/tomas-gajarsky/facetorch.git
 cd facetorch
 
 DETAIL: [../facial_expression/FERPlus/](../facial_expression/FERPlus/README.md)
+// TODO: label time stamp and do post processing to have the form like OpenFace library output for do syncing with other channels
 
 
 #### 2. OpenFace

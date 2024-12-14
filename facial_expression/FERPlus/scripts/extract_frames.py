@@ -1,27 +1,26 @@
 import cv2
 import os
-import argparse
 
-def extract_frames(video_path, output_folder):
+def extract_frames(video_path, output_folder, frame_rate=10):
     os.makedirs(output_folder, exist_ok=True)
     video = cv2.VideoCapture(video_path)
-    frame_count = 0
+    count = 0
+    success, frame = video.read()
 
-    while True:
-        ret, frame = video.read()
-        if not ret:
-            break
-        frame_path = os.path.join(output_folder, f"frame_{frame_count:04d}.jpg")
-        cv2.imwrite(frame_path, frame)
-        frame_count += 1
+    while success:
+        if count % frame_rate == 0:  # Extract every nth frame (adjust frame_rate)
+            frame_filename = os.path.join(output_folder, f"frame_{count:04d}.jpg")
+            cv2.imwrite(frame_filename, frame)
+        success, frame = video.read()
+        count += 1
 
     video.release()
-    print(f"Extracted {frame_count} frames to {output_folder}.")
+    print(f"Frames extracted to {output_folder}")
 
+# Example usage
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input", required=True, help="Path to input video")
-    parser.add_argument("--output", required=True, help="Path to output folder for frames")
-    args = parser.parse_args()
+    video_path = "../data/input/video.mp4"  # Path to your video
+    output_folder = "../data/input/frames/"  # Folder to store frames
+    extract_frames(video_path, output_folder, frame_rate=10)
 
-    extract_frames(args.input, args.output)
+# TODO: label time stamp and do post processing to have the form like OpenFace library output for do syncing with other channels
