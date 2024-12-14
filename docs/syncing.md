@@ -39,6 +39,7 @@ NOTE:
 ---
 
 ## The Universal Format:
+```
 [
     {
         "partition": "0-6s",
@@ -81,3 +82,4 @@ NOTE:
         ]
     }
 ]
+```
