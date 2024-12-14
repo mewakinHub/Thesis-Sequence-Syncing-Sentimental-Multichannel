@@ -167,6 +167,9 @@ conda install pytorch torchvision torchaudio -c pytorch -y
 conda install opencv -y
 pip install requests pillow matplotlib
 
+git clone https://github.com/tomas-gajarsky/facetorch.git
+cd facetorch
+
 DETAIL: [../facial_expression/FERPlus/](../facial_expression/FERPlus/README.md)
 
 

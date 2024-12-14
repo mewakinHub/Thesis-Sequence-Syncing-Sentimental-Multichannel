@@ -21,3 +21,6 @@ python scripts/analyze_emotions.py --input data/images --model models/fer_plus_w
 Outputs
 - Extracted frames: data/images/
 - Emotion scores: data/output/results.csv
+
+git clone https://github.com/tomas-gajarsky/facetorch.git
+cd facetorch
