@@ -1,0 +1,20 @@
+[
+    {
+        "time": 7.84,
+        "emotion": "Sad",
+        "confidence": 0.6086792349815369,
+        "transcript": " Today I've been in a photo shoot all day, I'm very knackered, you know, but I dawned the red and white top and I got on this dream and I said fuck it boys"
+    },
+    {
+        "time": 15.120000000000001,
+        "emotion": "Happy",
+        "confidence": 0.8682126998901367,
+        "transcript": " Dude I'm actually like really giddy. We're gonna hop on high because I have some plans for us that we're gonna do you guys"
+    },
+    {
+        "time": 17.76,
+        "emotion": "Neutral",
+        "confidence": 0.906170129776001,
+        "transcript": " Some things that I'd say we need to do"
+    }
+]

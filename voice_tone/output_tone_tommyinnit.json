@@ -1,0 +1,22 @@
+[
+    {
+        "time": 5,
+        "emotion": "Angry",
+        "confidence": 0.6252520680427551
+    },
+    {
+        "time": 10,
+        "emotion": "Angry",
+        "confidence": 0.9910242557525635
+    },
+    {
+        "time": 15,
+        "emotion": "Happy",
+        "confidence": 0.9073124527931213
+    },
+    {
+        "time": 20,
+        "emotion": "Happy",
+        "confidence": 0.9159389734268188
+    }
+]

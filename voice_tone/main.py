@@ -46,11 +46,11 @@ def analyze_voice_tone(chunks):
     return emotion_results
 
 if __name__ == "__main__":
-    file_name = "positive (happy) - tommyinnit - sound"
+    file_name = "positive (sarcastic) - michael reeves - sound"
     file_path = f"sounds/{file_name}.wav"
     chunks = split_audio(file_path, chunk_length_ms=5000)
     emotion_results = analyze_voice_tone(chunks)
-    output_file = "output_voice_tone.json"
+    output_file = "output_tone.json"
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(emotion_results, f, indent=4, ensure_ascii=False)
     print(f"Voice tone analysis results written to {output_file}")

@@ -35,14 +35,10 @@ def analyze_emotions(transcripts):
         emotion_label = emotion["label"].lower()
         if emotion_label == "anger":
             emotion_label = "Angry"
-        elif emotion_label == "disgust":
-            emotion_label = "Disgust"
         elif emotion_label == "fear":
             emotion_label = "Fear"
-        elif emotion_label == "joy":
+        elif emotion_label == "joy" or emotion_label == "love":
             emotion_label = "Happy"
-        elif emotion_label == "neutral":
-            emotion_label = "Neutral"
         elif emotion_label == "sadness":
             emotion_label = "Sad"
         elif emotion_label == "surprise":
@@ -58,13 +54,12 @@ def analyze_emotions(transcripts):
     return emotion_results
 
 if __name__ == "__main__":
-    file_name = "positive (happy) - tommyinnit - sound"
+    file_name = "positive (sarcastic) - michael reeves - sound"
     file_path = f"sounds/{file_name}.wav"
     chunks = split_audio(file_path, chunk_length_ms=30000)
-    print(chunks)
     transcription_results = transcribe_audio(chunks)
     emotion_results = analyze_emotions(transcription_results)
-    output_file = "output.json"
+    output_file = "output_transcription.json"
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(emotion_results, f, indent=4, ensure_ascii=False)
     print(f"Emotion results written to {output_file}")

@@ -1,0 +1,56 @@
+[
+    {
+        "time": 5.0,
+        "emotion": "Happy",
+        "confidence": 0.9222910404205322,
+        "transcript": " Mitch was in his final semester at a college in Louisiana when he met another senior, a wonderful"
+    },
+    {
+        "time": 6.6000000000000005,
+        "emotion": "Neutral",
+        "confidence": 0.3625844120979309,
+        "transcript": " young lady named Kayla."
+    },
+    {
+        "time": 9.72,
+        "emotion": "Happy",
+        "confidence": 0.7790312767028809,
+        "transcript": " From the instant he saw her, he knew he was in love."
+    },
+    {
+        "time": 13.64,
+        "emotion": "Neutral",
+        "confidence": 0.37166377902030945,
+        "transcript": " She played hard to get at first, but after several months, he won her over."
+    },
+    {
+        "time": 17.6,
+        "emotion": "Neutral",
+        "confidence": 0.3524860143661499,
+        "transcript": " After graduation, the pair stayed in Louisiana and moved in together while they got their"
+    },
+    {
+        "time": 18.92,
+        "emotion": "Fear",
+        "confidence": 0.6376789808273315,
+        "transcript": " careers off the ground."
+    },
+    {
+        "time": 22.92,
+        "emotion": "Happy",
+        "confidence": 0.9642248749732971,
+        "transcript": " Two years later, the pair got married and almost immediately Kayla got pregnant."
+    },
+    {
+        "time": 27.16,
+        "emotion": "Neutral",
+        "confidence": 0.6815505027770996,
+        "transcript": " At the time, Mitch's career was really starting to take off, which allowed Kayla to stay"
+    },
+    {
+        "time": 28.44,
+        "emotion": "Neutral",
+        "confidence": 0.6920749545097351,
+        "transcript": " at home and take some time off."
+    }
+]

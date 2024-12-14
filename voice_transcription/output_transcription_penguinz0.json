@@ -1,0 +1,44 @@
+[
+    {
+        "time": 5.44,
+        "emotion": "Neutral",
+        "confidence": 0.6488341689109802,
+        "transcript": " It can't even be a real soul. There's no way there's a human being that's handling our case. It's not possible."
+    },
+    {
+        "time": 13.08,
+        "emotion": "Neutral",
+        "confidence": 0.6739376187324524,
+        "transcript": " Because there is no reason we would keep being declined. They're not even giving us reasons that make any sense at all."
+    },
+    {
+        "time": 15.76,
+        "emotion": "Neutral",
+        "confidence": 0.6126978993415833,
+        "transcript": " Not to us, not to the lawyers, not to anybody. Nobody."
+    },
+    {
+        "time": 20.96,
+        "emotion": "Neutral",
+        "confidence": 0.801749587059021,
+        "transcript": " And no other esports team has had this problem. Every other org that has international players got in..."
+    },
+    {
+        "time": 22.28,
+        "emotion": "Neutral",
+        "confidence": 0.42307108640670776,
+        "transcript": " Look at his split."
+    },
+    {
+        "time": 24.12,
+        "emotion": "Angry",
+        "confidence": 0.681426465511322,
+        "transcript": " Fuckin' speed rant."
+    },
+    {
+        "time": 26.96,
+        "emotion": "Surprise",
+        "confidence": 0.4495246708393097,
+        "transcript": " Meanwhile, we can't. We literally can't."
+    }
+]

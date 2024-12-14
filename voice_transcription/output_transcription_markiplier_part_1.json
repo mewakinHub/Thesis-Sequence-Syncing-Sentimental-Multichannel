@@ -1,0 +1,38 @@
+[
+    {
+        "time": 7.0,
+        "emotion": "Neutral",
+        "confidence": 0.6356979608535767,
+        "transcript": " and I just wanted to reassure you guys that Markiplier as a channel will continue."
+    },
+    {
+        "time": 13.0,
+        "emotion": "Neutral",
+        "confidence": 0.6744359731674194,
+        "transcript": " I really hope that Ryan and Matt will want to continue moving forward with me,"
+    },
+    {
+        "time": 16.0,
+        "emotion": "Neutral",
+        "confidence": 0.9377712607383728,
+        "transcript": " but it's just going to take a lot of time."
+    },
+    {
+        "time": 18.0,
+        "emotion": "Neutral",
+        "confidence": 0.8666340112686157,
+        "transcript": " It's going to take a good bit of time."
+    },
+    {
+        "time": 24.0,
+        "emotion": "Sad",
+        "confidence": 0.9286524057388306,
+        "transcript": " This was a heavy loss that we all feel, and all of you out there probably feel,"
+    },
+    {
+        "time": 30.0,
+        "emotion": "Surprise",
+        "confidence": 0.6912227869033813,
+        "transcript": " in small ways that you probably didn't know, Daniel was part of what I did."
+    }
+]

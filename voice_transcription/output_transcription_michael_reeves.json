@@ -1,0 +1,26 @@
+[
+    {
+        "time": 5.78,
+        "emotion": "Happy",
+        "confidence": 0.6576452255249023,
+        "transcript": " You guys really have a lot of suggestions for machines and robots I should build and that's super cool"
+    },
+    {
+        "time": 10.48,
+        "emotion": "Neutral",
+        "confidence": 0.7228323817253113,
+        "transcript": " Except they all are fucking terrible. You know, I've never done a user-suggested robot"
+    },
+    {
+        "time": 13.68,
+        "emotion": "Neutral",
+        "confidence": 0.8406886458396912,
+        "transcript": " And I thought you guys would get the hint. Yeah a little a little subtlety to it"
+    },
+    {
+        "time": 19.26,
+        "emotion": "Angry",
+        "confidence": 0.7427838444709778,
+        "transcript": " But you guys keep pumping them out one after the other shitty ideas and my goddamn comment section"
+    }
+]

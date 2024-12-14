@@ -1,0 +1,38 @@
+[
+    {
+        "time": 6.92,
+        "emotion": "Neutral",
+        "confidence": 0.40619438886642456,
+        "transcript": " So what we came across that day in the woods was obviously unplanned and the reactions you saw on tape were raw. They were unfiltered"
+    },
+    {
+        "time": 10.16,
+        "emotion": "Neutral",
+        "confidence": 0.853630542755127,
+        "transcript": " None of us knew how to react"
+    },
+    {
+        "time": 12.92,
+        "emotion": "Sad",
+        "confidence": 0.5896208882331848,
+        "transcript": " or how to feel"
+    },
+    {
+        "time": 17.76,
+        "emotion": "Neutral",
+        "confidence": 0.39425182342529297,
+        "transcript": " I should have never posted the video. I should have put the cameras down and"
+    },
+    {
+        "time": 21.48,
+        "emotion": "Neutral",
+        "confidence": 0.6228757500648499,
+        "transcript": " Stopped recording what we were going through"
+    },
+    {
+        "time": 24.92,
+        "emotion": "Neutral",
+        "confidence": 0.45594078302383423,
+        "transcript": " There's a lot of things I should have done differently, but I didn't"
+    }
+]

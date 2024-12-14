@@ -1,0 +1,32 @@
+[
+    {
+        "time": 9.68,
+        "emotion": "Neutral",
+        "confidence": 0.5540168881416321,
+        "transcript": " A big part of what I did and Daniel, like he, he did a lot of things that were often unseen"
+    },
+    {
+        "time": 17.84,
+        "emotion": "Neutral",
+        "confidence": 0.8827065229415894,
+        "transcript": " and I just hope that he knew how much I respected him as a friend."
+    },
+    {
+        "time": 25.04,
+        "emotion": "Happy",
+        "confidence": 0.7544971704483032,
+        "transcript": " Anyway, just thank you guys so much for your support."
+    },
+    {
+        "time": 28.68,
+        "emotion": "Happy",
+        "confidence": 0.6791380643844604,
+        "transcript": " Thank you so much for understanding and we will be back."
+    },
+    {
+        "time": 30.68,
+        "emotion": "Neutral",
+        "confidence": 0.5274730920791626,
+        "transcript": " It's just send a lot of love."
+    }
+]
