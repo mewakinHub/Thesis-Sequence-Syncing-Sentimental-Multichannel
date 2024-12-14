@@ -163,15 +163,18 @@ confusing topic:
 #### 1. AffectNet (FER+)
 conda create -n facial_expression python=3.9 -y
 conda activate facial_expression
-conda install pytorch torchvision torchaudio -c pytorch -y
-conda install opencv -y
-pip install requests pillow matplotlib
 
 git clone https://github.com/tomas-gajarsky/facetorch.git
-cd facetorch
+# Download EfficientNet-B0 Model
+gdown --id 1i5f8vy1dZv_u8vsJsj9CHEzHwsokIknr -O data\models\1\model.pt
+
+# Download EfficientNet-B2 Model
+gdown --id 1xoB5VYOd0XLjb-rQqqHWCkQvma4NytEd -O data\models\2\model.pt
+
 
 DETAIL: [../facial_expression/FERPlus/](../facial_expression/FERPlus/README.md)
-// TODO: label time stamp and do post processing to have the form like OpenFace library output for do syncing with other channels
+- multiple individual image folder
+- consecutive frame of video
 
 
 #### 2. OpenFace

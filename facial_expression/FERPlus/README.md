@@ -137,36 +137,6 @@ python scripts/analyze_emotions.py --input data/input/KA.AN1.39.jpg --output dat
 python scripts/analyze_emotions_with_validation.py --input data/jaffe_converted/ --output data/output/validation_results.txt --model data/models/1/model.pt
 ```
 
-### Video Frames:
----
-
-#### **Steps to Validate:**
-1. Run the modified `extract_frames.py` to extract frames at a 1-second interval.
-To process a video by extracting frames at a 1-second interval and then validate those frames for facial expressions, we need to:
-
-**Extract frames at the specified sampling rate.**
-    "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\positive (sarcastic) - michael reeves\original clip.mp4"
-    "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\positive (happy) - tommyinnit\original clip.mp4"
-    "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\neutral - mrballen\original clip.mp4"
-    "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\negative (sad) - markiplier part 2\original clip.mp4"
-    "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\negative (sad) - markiplier part 1\original clip.mp4"
-    "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\negative (sad) - logan paul\original clip.mp4"
-    "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\negative (angry) - penguinz0\original clip.mp4"
-
-2. Use the `analyze_emotions_with_validation.py` script to validate the frames.
-Analyze each extracted frame using the emotion recognition model.
-**Command with Labels File**
-If you have corresponding JSON labels:
-```cmd
-python scripts\analyze_emotions_with_validation.py --input data\video_frames\penguinz0 --output data\output\penguinz0_validation.txt --model data\models\1\model.pt --labels data\labels\penguinz0.json
-python scripts\analyze_emotions_with_validation.py --input data\video_frames\michael_reeves --output data\output\michael_reeves_validation.txt --model data\models\1\model.pt --labels data\labels\michael_reeves.json
-python scripts\analyze_emotions_with_validation.py --input data\video_frames\tommyinnit --output data\output\tommyinnit_validation.txt --model data\models\1\model.pt --labels data\labels\tommyinnit.json
-python scripts\analyze_emotions_with_validation.py --input data\video_frames\mrballen --output data\output\mrballen_validation.txt --model data\model\1s\model.pt --labels data\labels\mrballen.json
-python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part1 --output data\output\markiplier_part1_validation.txt --model data\models\1\model.pt --labels data\labels\markiplier_part1.json
-python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part2 --output data\output\markiplier_part2_validation.txt --model data\models\1\model.pt --labels data\labels\markiplier_part2.json
-python scripts\analyze_emotions_with_validation.py --input data\video_frames\logan_paul --output data\output\logan_paul_validation.txt --model data\models\1\model.pt --labels data\labels\logan_paul.json
-```
-
 ---
 
 **Command Without Labels File**
