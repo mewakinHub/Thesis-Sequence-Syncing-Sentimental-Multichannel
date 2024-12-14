@@ -1,5 +1,8 @@
 # Facial Expression Analysis Using Facetorch
 
+In Facetorch, the emotions it can detect depend on the dataset it is trained on. For instance, if it is using models like those trained on the FER+ dataset, it typically detects the following 8 basic emotions:
+LABELS = ["Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", "Neutral", "Contempt (optional, depending on the model version)"]
+
 This project uses the Facetorch library for analyzing facial expressions in both:
 1. Individual images (e.g., JPG files).
 2. Consecutive video frames (extracted from a video).
@@ -133,9 +136,11 @@ python scripts/analyze_emotions.py --input ../data/input/image.jpg
 
 # Single Image:
 python scripts/analyze_emotions.py --input data/input/KA.AN1.39.jpg --output data/output/results.txt --model data/models/1/model.pt
+python scripts/analyze_emotions.py --input data/input/KA.AN1.39.jpg --output data/output/results.txt --model data/models/2/model.pt
 
 # Validate Folder:
 python scripts/analyze_emotions_with_validation.py --input data/jaffe_converted/ --output data/output/validation_results.txt --model data/models/1/model.pt
+python scripts/analyze_emotions_with_validation.py --input data/jaffe_converted/ --output data/output/validation_results.txt --model data/models/2/model.pt
 ```
 
 ---
@@ -210,7 +215,6 @@ FERPlus/
 │       ├── logan_paul_validation.txt
 │       └── penguinz0_validation.txt
 ```
-Here’s the command adapted for Windows **Command Prompt (CMD)** and applied to all 7 datasets:
 
 ---
 
