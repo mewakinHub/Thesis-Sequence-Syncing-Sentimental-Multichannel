@@ -1,0 +1,34 @@
+Accuracy: 31.25%
+Image, Ground Truth, Prediction, Confidence, Correct
+frame_0000.jpg, Neutral, Fear, 0.31, False
+frame_0001.jpg, Neutral, Neutral, 0.51, True
+frame_0002.jpg, Neutral, Neutral, 0.40, True
+frame_0003.jpg, Sad, Fear, 0.38, False
+frame_0004.jpg, Neutral, Neutral, 0.40, True
+frame_0005.jpg, Angry, Fear, 0.35, False
+frame_0006.jpg, Neutral, Neutral, 0.33, True
+frame_0007.jpg, Sad, Neutral, 0.43, False
+frame_0008.jpg, Sad, Neutral, 0.38, False
+frame_0009.jpg, Sad, Neutral, 0.33, False
+frame_0010.jpg, Neutral, Neutral, 0.35, True
+frame_0011.jpg, Neutral, Neutral, 0.29, True
+frame_0012.jpg, Neutral, Fear, 0.29, False
+frame_0013.jpg, Sad, Fear, 0.36, False
+frame_0014.jpg, Sad, Fear, 0.37, False
+frame_0015.jpg, Neutral, Neutral, 0.41, True
+frame_0016.jpg, Neutral, Neutral, 0.39, True
+frame_0017.jpg, Sad, Fear, 0.31, False
+frame_0018.jpg, Sad, Fear, 0.30, False
+frame_0019.jpg, Sad, Neutral, 0.30, False
+frame_0020.jpg, Neutral, Fear, 0.29, False
+frame_0021.jpg, Sad, Fear, 0.33, False
+frame_0022.jpg, Neutral, Fear, 0.32, False
+frame_0023.jpg, Neutral, Neutral, 0.42, True
+frame_0024.jpg, Neutral, Neutral, 0.30, True
+frame_0025.jpg, Happy, Fear, 0.36, False
+frame_0026.jpg, Happy, Neutral, 0.28, False
+frame_0027.jpg, Sad, Fear, 0.30, False
+frame_0028.jpg, Sad, Neutral, 0.28, False
+frame_0029.jpg, Sad, Neutral, 0.30, False
+frame_0030.jpg, Sad, Neutral, 0.30, False
+frame_0031.jpg, Sad, Neutral, 0.39, False
