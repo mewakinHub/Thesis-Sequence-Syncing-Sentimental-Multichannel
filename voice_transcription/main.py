@@ -32,22 +32,39 @@ def analyze_emotions(transcripts):
     emotion_results = []
     for item in transcripts:
         emotion = emotion_analyzer(item["transcript"])[0]
+        emotion_label = emotion["label"].lower()
+        if emotion_label == "anger":
+            emotion_label = "Angry"
+        elif emotion_label == "disgust":
+            emotion_label = "Disgust"
+        elif emotion_label == "fear":
+            emotion_label = "Fear"
+        elif emotion_label == "joy":
+            emotion_label = "Happy"
+        elif emotion_label == "neutral":
+            emotion_label = "Neutral"
+        elif emotion_label == "sadness":
+            emotion_label = "Sad"
+        elif emotion_label == "surprise":
+            emotion_label = "Surprise"
+        else:
+            emotion_label = "Neutral"
         emotion_results.append({
             "time": item["time"],
-            "emotion": emotion["label"].lower(),
+            "emotion": emotion_label,
             "confidence": emotion["score"],
             "transcript": item["transcript"]
         })
     return emotion_results
 
 if __name__ == "__main__":
-    file_path = "sounds/neutral (calm) - mrballen - sound.wav"
+    file_name = "positive (happy) - tommyinnit - sound"
+    file_path = f"sounds/{file_name}.wav"
     chunks = split_audio(file_path, chunk_length_ms=30000)
+    print(chunks)
     transcription_results = transcribe_audio(chunks)
     emotion_results = analyze_emotions(transcription_results)
-
     output_file = "output.json"
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(emotion_results, f, indent=4, ensure_ascii=False)
-
     print(f"Emotion results written to {output_file}")
