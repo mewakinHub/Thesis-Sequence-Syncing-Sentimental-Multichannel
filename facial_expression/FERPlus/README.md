@@ -138,13 +138,13 @@ python scripts/analyze_emotions_with_validation.py --input data/jaffe_converted/
 ```
 
 ### Video Frames:
-```bash
-python scripts/extract_frames.py --input ../data/input/video.mp4 --output ../data/input/frames/
-python scripts/analyze_emotions.py --input ../data/input/frames/ --output ../data/output/video_results.txt
-```
+---
+
+#### **Steps to Validate:**
+1. Run the modified `extract_frames.py` to extract frames at a 1-second interval.
 To process a video by extracting frames at a 1-second interval and then validate those frames for facial expressions, we need to:
 
-1. Extract frames at the specified sampling rate.
+**Extract frames at the specified sampling rate.**
     "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\positive (sarcastic) - michael reeves\original clip.mp4"
     "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\positive (happy) - tommyinnit\original clip.mp4"
     "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\neutral - mrballen\original clip.mp4"
@@ -152,57 +152,51 @@ To process a video by extracting frames at a 1-second interval and then validate
     "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\negative (sad) - markiplier part 1\original clip.mp4"
     "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\negative (sad) - logan paul\original clip.mp4"
     "C:\Users\mew\Documents\github\Thesis-Sequence-Syncing-Sentimental-Multichannel\input_sample_video\negative (angry) - penguinz0\original clip.mp4"
-2. Analyze each extracted frame using the emotion recognition model.
+
+2. Use the `analyze_emotions_with_validation.py` script to validate the frames.
+Analyze each extracted frame using the emotion recognition model.
+**Command with Labels File**
+If you have corresponding JSON labels:
+```cmd
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\penguinz0 --output data\output\penguinz0_validation.txt --model data\models\1\model.pt --labels data\labels\penguinz0.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\michael_reeves --output data\output\michael_reeves_validation.txt --model data\models\1\model.pt --labels data\labels\michael_reeves.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\tommyinnit --output data\output\tommyinnit_validation.txt --model data\models\1\model.pt --labels data\labels\tommyinnit.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\mrballen --output data\output\mrballen_validation.txt --model data\model\1s\model.pt --labels data\labels\mrballen.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part1 --output data\output\markiplier_part1_validation.txt --model data\models\1\model.pt --labels data\labels\markiplier_part1.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part2 --output data\output\markiplier_part2_validation.txt --model data\models\1\model.pt --labels data\labels\markiplier_part2.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\logan_paul --output data\output\logan_paul_validation.txt --model data\models\1\model.pt --labels data\labels\logan_paul.json
+```
 
 ---
 
-#### **Steps to Validate:**
-1. Run the modified `extract_frames.py` to extract frames at a 1-second interval.
-2. Use the `analyze_emotions_with_validation.py` script to validate the frames.
+**Command Without Labels File**
+If you don’t have JSON labels, run the following commands:
 
-1. **Extract Frames**
-   Run this command to extract frames from the video:
+```cmd
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\penguinz0 --output data\output\penguinz0_validation.txt --model data\models\1\model.pt
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\michael_reeves --output data\output\michael_reeves_validation.txt --model data\models\1\model.pt
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\tommyinnit --output data\output\tommyinnit_validation.txt --model data\models\1\model.pt
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\mrballen --output data\output\mrballen_validation.txt --model data\models\1\model.pt
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part1 --output data\output\markiplier_part1_validation.txt --model data\models\1\model.pt
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part2 --output data\output\markiplier_part2_validation.txt --model data\models\1\model.pt
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\logan_paul --output data\output\logan_paul_validation.txt --model data\models\1\model.pt
+```
+
+---
+**Explanation of Command Components**
+- `--input`: Path to the folder containing extracted frames for the specific dataset.
+- `--output`: File to save the validation results (per dataset).
+- `--model`: Path to the pre-trained model (`model.pt`).
+- `--labels`: Optional parameter pointing to a JSON file containing ground truth labels for the dataset.
+
+---
+
+#### Automating for All Datasets
+If you have a lot of datasets and want to automate this in **Command Prompt**, you can create a batch script (`validate_all.bat`):
+
+Run it in Command Prompt:
    ```cmd
-   python scripts/extract_frames.py --input "../../input_sample_video/negative (angry) - penguinz0/negative (angry) - penguinz0 - video.mp4" --output data/video_frames/ --rate 1
-   ```
-   ```bash
-   python scripts/extract_frames.py --input "../../input_sample_video/positive (sarcastic) - michael reeves/original clip.mp4" --output data/video_frames/michael_reeves/ --rate 1
-
-    python scripts/extract_frames.py --input "../../input_sample_video/positive (happy) - tommyinnit/original clip.mp4" --output data/video_frames/tommyinnit/ --rate 1
-
-    python scripts/extract_frames.py --input "../../input_sample_video/neutral - mrballen/original clip.mp4" --output data/video_frames/mrballen/ --rate 1
-
-    python scripts/extract_frames.py --input "../../input_sample_video/negative (sad) - markiplier part 1/original clip.mp4" --output data/video_frames/markiplier_part1/ --rate 1
-
-    python scripts/extract_frames.py --input "../../input_sample_video/negative (sad) - markiplier part 2/original clip.mp4" --output data/video_frames/markiplier_part2/ --rate 1
-
-    python scripts/extract_frames.py --input "../../input_sample_video/negative (sad) - logan paul/original clip.mp4" --output data/video_frames/logan_paul/ --rate 1
-
-    python scripts/extract_frames.py --input "../../input_sample_video/negative (angry) - penguinz0/original clip.mp4" --output data/video_frames/penguinz0/ --rate 1
-   ```
-   path to input_same_video folder is [](../../input_sample_video/)
-
-   This will save the extracted frames into the `data/video_frames/` folder.
-
-2. **Validate Extracted Frames**
-   Validate the extracted frames using the emotion recognition model:
-   ```cmd
-   python scripts\analyze_emotions_with_validation.py --input data\video_frames\ --output data\output\video_validation_results.txt --model data\models\1\model.pt
-   ```
-   ```bash
-    python scripts\analyze_emotions_with_validation.py --input data\video_frames\michael_reeves\ --output data\output\michael_reeves_validation.txt --model data\models\1\model.pt
-
-    python scripts\analyze_emotions_with_validation.py --input data\video_frames\tommyinnit\ --output data\output\tommyinnit_validation.txt --model data\models\1\model.pt
-
-    python scripts\analyze_emotions_with_validation.py --input data\video_frames\mrballen\ --output data\output\mrballen_validation.txt --model data\models\1\model.pt
-
-    python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part1\ --output data\output\markiplier_part1_validation.txt --model data\models\1\model.pt
-
-    python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part2\ --output data\output\markiplier_part2_validation.txt --model data\models\1\model.pt
-
-    python scripts\analyze_emotions_with_validation.py --input data\video_frames\logan_paul\ --output data\output\logan_paul_validation.txt --model data\models\1\model.pt
-
-    python scripts\analyze_emotions_with_validation.py --input data\video_frames\penguinz0\ --output data\output\penguinz0_validation.txt --model data\models\1\model.pt
+   validate_all.bat
    ```
 
 ---
@@ -245,3 +239,6 @@ FERPlus/
 │       ├── logan_paul_validation.txt
 │       └── penguinz0_validation.txt
 ```
+Here’s the command adapted for Windows **Command Prompt (CMD)** and applied to all 7 datasets:
+
+---

@@ -12,6 +12,16 @@ def load_model(model_path):
     model.eval()
     return model
 
+def load_ground_truth_labels(json_path):
+    """Load ground truth labels from a JSON file."""
+    import json
+    if not json_path:
+        return None
+    with open(json_path, "r") as f:
+        data = json.load(f)
+    # Create a mapping from frame names to labels
+    return {item["frame"]: item["label"] for item in data["ImageLabels"]}
+
 def preprocess_image(image_path):
     """Preprocess the image for the model."""
     transform = transforms.Compose([
@@ -44,7 +54,7 @@ def parse_ground_truth(file_name):
     }
     return mapping.get(label_code, "Unknown")
 
-def validate_folder(folder_path, model, output_file):
+def validate_folder(folder_path, model, output_file, json_labels=None):
     """Validate predictions for all images in a folder."""
     total_images = 0
     correct_predictions = 0
@@ -53,7 +63,8 @@ def validate_folder(folder_path, model, output_file):
     for img_name in sorted(os.listdir(folder_path)):
         if img_name.endswith(".jpg"):
             img_path = os.path.join(folder_path, img_name)
-            ground_truth = parse_ground_truth(img_name)
+            # Use JSON labels if available, otherwise parse from the file name
+            ground_truth = json_labels.get(img_name, "Unknown") if json_labels else parse_ground_truth(img_name)
             predicted_emotion = predict_emotion(img_path, model)
 
             is_correct = (predicted_emotion == ground_truth)
@@ -70,12 +81,18 @@ def validate_folder(folder_path, model, output_file):
     print(f"Results saved to {output_file}")
     print(f"Validation Accuracy: {accuracy:.2f}%")
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Validate Facial Expression Recognition")
     parser.add_argument("--input", required=True, help="Path to the folder of images")
     parser.add_argument("--output", required=True, help="Path to save validation results")
     parser.add_argument("--model", required=True, help="Path to the pre-trained model")
+    parser.add_argument("--labels", required=False, help="Path to the JSON file with ground truth labels")
     args = parser.parse_args()
 
+    # Load the model and ground truth labels
     model = load_model(args.model)
-    validate_folder(args.input, model, args.output)
+    json_labels = load_ground_truth_labels(args.labels) if args.labels else None
+    
+    # Validate folder with optional JSON labels
+    validate_folder(args.input, model, args.output, json_labels)
