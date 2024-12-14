@@ -223,8 +223,11 @@ To process a video by extracting frames at a 1-second interval and then validate
 - Use Command Prompt to activate your Conda environment and execute the script.
 
 ```
-facial_expression/
+FERPlus/
 ├── data/
+│   ├── label/
+│   │   │   ├── penguinz0.json
+│   │   │   ├── tommyinnit.json
 │   ├── video_frames/
 │   │   ├── michael_reeves/
 │   │   ├── tommyinnit/
