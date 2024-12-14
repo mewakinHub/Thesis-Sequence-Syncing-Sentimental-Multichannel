@@ -31,6 +31,12 @@ NOTE:
 ไอ้ condition ยังมีแค่ ประชด เพราะยังไม่ได้คิดเพิ่ม ยังไม่เข้าใจอารมณ์มนุษย์เพียงพอ ยังไม่บรรลุ
 
 ---
+## TODO:
+1. syncing on 2 or 3 channels partitioned by transcript chunk with weight on confident score
+2. if conflict(+/- or +/neutral or bla bla bla, use creative) emotion, reach threshold > 3 consecutive timestamps: count as it's really conflict and reset the threshold -> use ChatGPT to help
+3. 
+
+---
 
 ## The Universal Format:
 [
