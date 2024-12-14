@@ -73,6 +73,7 @@ python scripts/analyze_emotions.py --input ../data/input/image.jpg
 ---
 
 ### **2. Video Analysis - Consecutive Frames**
+
 #### Step 1: Extract Frames from Video
 Use `extract_frames.py` to extract frames from the video:
 ```bash
@@ -212,3 +213,36 @@ FERPlus/
 Here’s the command adapted for Windows **Command Prompt (CMD)** and applied to all 7 datasets:
 
 ---
+
+### Result:
+model v1:
+    model v1
+    Results saved to data\output\penguinz0_validation.txt
+    Validation Accuracy: 21.43%
+    Results saved to data\output\michael_reeves_validation.txt
+    Validation Accuracy: 30.00%
+    Results saved to data\output\tommyinnit_validation.txt
+    Validation Accuracy: 47.37%
+    Results saved to data\output\mrballen_validation.txt
+    Validation Accuracy: 13.33%
+    Results saved to data\output\markiplier_part1_validation.txt
+    Validation Accuracy: 31.25%
+    Results saved to data\output\markiplier_part2_validation.txt
+    Validation Accuracy: 3.12%
+    Results saved to data\output\logan_paul_validation.txt
+    Validation Accuracy: 34.62%
+model v2:
+    Results saved to data\output\penguinz0_validation.txt
+    Validation Accuracy: 10.71%
+    Results saved to data\output\michael_reeves_validation.txt
+    Validation Accuracy: 0.00%
+    Results saved to data\output\tommyinnit_validation.txt
+    Validation Accuracy: 10.53%
+    Results saved to data\output\mrballen_validation.txt
+    Validation Accuracy: 0.00%
+    Results saved to data\output\markiplier_part1_validation.txt
+    Validation Accuracy: 0.00%
+    Results saved to data\output\markiplier_part2_validation.txt
+    Validation Accuracy: 0.00%
+    Results saved to data\output\logan_paul_validation.txt
+    Validation Accuracy: 65.38%

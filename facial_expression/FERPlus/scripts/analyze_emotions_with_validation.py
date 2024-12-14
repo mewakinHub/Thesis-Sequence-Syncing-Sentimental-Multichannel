@@ -3,6 +3,7 @@ import argparse
 import torch
 from torchvision import transforms
 from PIL import Image
+import json
 
 LABELS = ["Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", "Neutral"]
 
@@ -14,13 +15,12 @@ def load_model(model_path):
 
 def load_ground_truth_labels(json_path):
     """Load ground truth labels from a JSON file."""
-    import json
     if not json_path:
-        return None
+        return {}
     with open(json_path, "r") as f:
         data = json.load(f)
     # Create a mapping from frame names to labels
-    return {item["frame"]: item["label"] for item in data["ImageLabels"]}
+    return {item["frame"]: item["label"] for item in data.get("ImageLabels", [])}
 
 def preprocess_image(image_path):
     """Preprocess the image for the model."""
@@ -47,7 +47,10 @@ def predict_emotion_with_confidence(image_path, model):
     with torch.no_grad():
         output = model(input_tensor)
         probabilities = torch.softmax(output, dim=1) # confidence scores
-        max_prob, predicted_idx = torch.max(probabilities, 1)
+        # max_prob, predicted_idx = torch.max(probabilities, 1)
+        max_prob, predicted_idx = probabilities.max(1)
+        if predicted_idx.item() >= len(LABELS):  # Handle out-of-range index
+            return "Unknown", 0.0
     return LABELS[predicted_idx.item()], max_prob.item()
    
 def parse_ground_truth(file_name):
@@ -94,7 +97,6 @@ def validate_folder(folder_path, model, output_file, json_labels=None):
         #     f.write(f"{img_name}, {ground_truth}, {predicted_emotion}, {is_correct}\n")
     print(f"Results saved to {output_file}")
     print(f"Validation Accuracy: {accuracy:.2f}%")
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Validate Facial Expression Recognition")
