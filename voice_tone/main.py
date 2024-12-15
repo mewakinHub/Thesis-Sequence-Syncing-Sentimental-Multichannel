@@ -36,8 +36,6 @@ def analyze_voice_tone(chunks):
             emotion_label = "Sad"
         elif emotion_label == "label_7":
             emotion_label = "Surprise"
-        else:
-            emotion_label = "Neutral"
         emotion_results.append({
             "time": (i + 1) * 5,
             "emotion": emotion_label,

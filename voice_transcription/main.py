@@ -35,16 +35,16 @@ def analyze_emotions(transcripts):
         emotion_label = emotion["label"].lower()
         if emotion_label == "anger":
             emotion_label = "Angry"
+        elif emotion_label == "disgust":
+            emotion_label = "Disgust"
         elif emotion_label == "fear":
             emotion_label = "Fear"
-        elif emotion_label == "joy" or emotion_label == "love":
+        elif emotion_label == "joy":
             emotion_label = "Happy"
         elif emotion_label == "sadness":
             emotion_label = "Sad"
         elif emotion_label == "surprise":
             emotion_label = "Surprise"
-        else:
-            emotion_label = "Neutral"
         emotion_results.append({
             "time": item["time"],
             "emotion": emotion_label,

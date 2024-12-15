@@ -2,7 +2,7 @@
 - https://huggingface.co/j-hartmann/emotion-english-distilroberta-base
 
 ### Emotion standardization
-- angry -> Angry
+- anger -> Angry
 - disgust -> Disgust
 - fear -> Fear
 - joy -> Happy
