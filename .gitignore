@@ -3,13 +3,6 @@
 /setup_log.txt 
 /temp_output.txt
 
-# # Ignore the YOLO model weights
-assets/models/best.pt
-*.pt
-
-# # outputs folder
-outputs/
-
 # Standard Python ignores
 *.py[cod]
 __pycache__/
