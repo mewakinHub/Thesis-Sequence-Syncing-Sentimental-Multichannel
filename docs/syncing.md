@@ -45,6 +45,7 @@ NOTE:
         "partition": "0-6s",
         "transcript": {
             "text": "Mitch was in his final semester at a college in Louisiana when he met another senior, a wonderful",
+            "emotion": "Happy",
             "confidence": 0.9222
         },
         "facial_expression": [
@@ -65,6 +66,7 @@ NOTE:
         "partition": "7-12s",
         "transcript": {
             "text": "young lady named Kayla.",
+            "emotion": "Neutral",
             "confidence": 0.85
         },
         "facial_expression": [
