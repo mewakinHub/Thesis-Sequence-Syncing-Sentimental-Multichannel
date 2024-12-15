@@ -59,20 +59,65 @@ def calculate_weighted_emotion(partition_data):
     final_emotion = max(emotion_scores, key=emotion_scores.get)
     return final_emotion, emotion_scores[final_emotion]
 
+def refine_emotion_transitions(partition_results, stability_threshold=2):
+    refined_results = []
+    current_emotion = None
+    current_streak = []
+
+    for result in partition_results:
+        partition_emotion = result["final_emotion"]
+
+        if partition_emotion == "Neutral":
+            # Finalize current streak
+            if current_streak:
+                # Check if the streak is too short
+                refined_results.extend(current_streak)
+                current_streak = []
+            # Append Neutral as is
+            refined_results.append(result)
+            continue
+
+        # Handle valid emotions
+        if partition_emotion == current_emotion:
+            current_streak.append(result)
+        else:
+            # Finalize current streak if it exists
+            if current_streak:
+                if len(current_streak) < stability_threshold:
+                    for streak_result in current_streak:
+                        streak_result["final_emotion"] = "Neutral"
+                refined_results.extend(current_streak)
+
+            # Start a new streak
+            current_emotion = partition_emotion
+            current_streak = [result]
+
+    # Finalize the last streak
+    if current_streak:
+        if len(current_streak) < stability_threshold:
+            for streak_result in current_streak:
+                streak_result["final_emotion"] = "Neutral"
+        refined_results.extend(current_streak)
+
+    return refined_results
+
 # Read the output.json file
 with open("output.json", "r") as f:
     data = json.load(f)
 
 # Process each partition
-results = []
+raw_results = []
 for partition in data:
     final_emotion, confidence = calculate_weighted_emotion(partition)
-    results.append({
+    raw_results.append({
         "partition": partition["partition"],
         "final_emotion": final_emotion,
         "confidence": confidence
     })
 
-# Output results
-for result in results:
+# Refine results to filter noise
+refined_results = refine_emotion_transitions(raw_results)
+
+# Output refined results
+for result in refined_results:
     print(f"Partition: {result['partition']}, Final Emotion: {result['final_emotion']}, Confidence: {result['confidence']:.2f}")
