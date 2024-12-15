@@ -1,3 +1,4 @@
+import os
 import json
 from collections import defaultdict
 
@@ -101,6 +102,10 @@ def refine_emotion_transitions(partition_results, stability_threshold=2):
 
     return refined_results
 
+# Ensure the output directory exists
+output_dir = "Final_voting"
+os.makedirs(output_dir, exist_ok=True)
+
 # Read the output.json file
 with open("output.json", "r") as f:
     data = json.load(f)
@@ -117,6 +122,11 @@ for partition in data:
 
 # Refine results to filter noise
 refined_results = refine_emotion_transitions(raw_results)
+
+# Save refined results to a file
+output_file = os.path.join(output_dir, "refined_results.json")
+with open(output_file, "w") as f:
+    json.dump(refined_results, f, indent=4)
 
 # Output refined results
 for result in refined_results:

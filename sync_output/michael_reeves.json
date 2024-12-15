@@ -1,0 +1,164 @@
+[
+    {
+        "partition": "0-5s",
+        "transcript": {
+            "text": " You guys really have a lot of suggestions for machines and robots I should build and that's super cool",
+            "emotion": "Happy",
+            "confidence": 0.6576452255249023
+        },
+        "facial_expression": [
+            {
+                "frame": "0000.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0001.jpg",
+                "emotion": "Fear",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0002.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0003.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0004.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0005.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 5,
+                "emotion": "Angry",
+                "confidence": 0.9946409463882446
+            }
+        ]
+    },
+    {
+        "partition": "5-10s",
+        "transcript": {
+            "text": " Except they all are fucking terrible. You know, I've never done a user-suggested robot",
+            "emotion": "Neutral",
+            "confidence": 0.7228323817253113
+        },
+        "facial_expression": [
+            {
+                "frame": "0006.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0007.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0008.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0009.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0010.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 10,
+                "emotion": "Angry",
+                "confidence": 0.9854957461357117
+            }
+        ]
+    },
+    {
+        "partition": "10-13s",
+        "transcript": {
+            "text": " And I thought you guys would get the hint. Yeah a little a little subtlety to it",
+            "emotion": "Neutral",
+            "confidence": 0.8406886458396912
+        },
+        "facial_expression": [
+            {
+                "frame": "0011.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0012.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0013.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "13-19s",
+        "transcript": {
+            "text": " But you guys keep pumping them out one after the other shitty ideas and my goddamn comment section",
+            "emotion": "Angry",
+            "confidence": 0.7427838444709778
+        },
+        "facial_expression": [
+            {
+                "frame": "0014.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0015.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0016.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0017.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            },
+            {
+                "frame": "0018.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0019.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.24
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 15,
+                "emotion": "Happy",
+                "confidence": 0.9142546057701111
+            }
+        ]
+    }
+]

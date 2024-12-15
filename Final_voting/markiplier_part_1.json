@@ -1,0 +1,32 @@
+[
+    {
+        "partition": "0-7s",
+        "final_emotion": "Surprise",
+        "confidence": 0.468
+    },
+    {
+        "partition": "7-13s",
+        "final_emotion": "Neutral",
+        "confidence": 0.5317521572113038
+    },
+    {
+        "partition": "13-16s",
+        "final_emotion": "Neutral",
+        "confidence": 0.4688856303691864
+    },
+    {
+        "partition": "16-18s",
+        "final_emotion": "Neutral",
+        "confidence": 0.43331700563430786
+    },
+    {
+        "partition": "18-24s",
+        "final_emotion": "Neutral",
+        "confidence": 0.4643262028694153
+    },
+    {
+        "partition": "24-30s",
+        "final_emotion": "Neutral",
+        "confidence": 0.5466113934516906
+    }
+]

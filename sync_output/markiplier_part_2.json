@@ -1,0 +1,246 @@
+[
+    {
+        "partition": "0-9s",
+        "transcript": {
+            "text": " A big part of what I did and Daniel, like he, he did a lot of things that were often unseen",
+            "emotion": "Neutral",
+            "confidence": 0.5540168881416321
+        },
+        "facial_expression": [
+            {
+                "frame": "0000.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0001.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0002.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0003.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0004.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0005.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0006.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0007.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0008.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0009.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 5,
+                "emotion": "Happy",
+                "confidence": 0.9138169288635254
+            }
+        ]
+    },
+    {
+        "partition": "9-17s",
+        "transcript": {
+            "text": " and I just hope that he knew how much I respected him as a friend.",
+            "emotion": "Neutral",
+            "confidence": 0.8827065229415894
+        },
+        "facial_expression": [
+            {
+                "frame": "0010.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.24
+            },
+            {
+                "frame": "0011.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0012.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0013.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0014.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0015.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0016.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0017.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 10,
+                "emotion": "Disgust",
+                "confidence": 0.6680320501327515
+            },
+            {
+                "time": 15,
+                "emotion": "Happy",
+                "confidence": 0.9438834190368652
+            }
+        ]
+    },
+    {
+        "partition": "17-25s",
+        "transcript": {
+            "text": " Anyway, just thank you guys so much for your support.",
+            "emotion": "Happy",
+            "confidence": 0.7544971704483032
+        },
+        "facial_expression": [
+            {
+                "frame": "0018.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.24
+            },
+            {
+                "frame": "0019.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.25
+            },
+            {
+                "frame": "0020.jpg",
+                "emotion": "Happy",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0021.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0022.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0023.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0024.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            },
+            {
+                "frame": "0025.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 20,
+                "emotion": "Disgust",
+                "confidence": 0.971251368522644
+            },
+            {
+                "time": 25,
+                "emotion": "Fear",
+                "confidence": 0.9809048175811768
+            }
+        ]
+    },
+    {
+        "partition": "25-28s",
+        "transcript": {
+            "text": " Thank you so much for understanding and we will be back.",
+            "emotion": "Happy",
+            "confidence": 0.6791380643844604
+        },
+        "facial_expression": [
+            {
+                "frame": "0026.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0027.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0028.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "28-30s",
+        "transcript": {
+            "text": " It's just send a lot of love.",
+            "emotion": "Neutral",
+            "confidence": 0.5274730920791626
+        },
+        "facial_expression": [
+            {
+                "frame": "0029.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0030.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 30,
+                "emotion": "Angry",
+                "confidence": 0.6646349430084229
+            }
+        ]
+    }
+]
