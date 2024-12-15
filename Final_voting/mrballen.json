@@ -1,0 +1,47 @@
+[
+    {
+        "partition": "0-5s",
+        "final_emotion": "Happy",
+        "confidence": 0.6711455202102663
+    },
+    {
+        "partition": "5-6s",
+        "final_emotion": "Neutral",
+        "confidence": 0.3411096155643463
+    },
+    {
+        "partition": "6-9s",
+        "final_emotion": "Happy",
+        "confidence": 0.4945156383514404
+    },
+    {
+        "partition": "9-13s",
+        "final_emotion": "Neutral",
+        "confidence": 0.4103732205726005
+    },
+    {
+        "partition": "13-17s",
+        "final_emotion": "Neutral",
+        "confidence": 0.30868732929229736
+    },
+    {
+        "partition": "17-18s",
+        "final_emotion": "Neutral",
+        "confidence": 0.31883949041366577
+    },
+    {
+        "partition": "18-22s",
+        "final_emotion": "Happy",
+        "confidence": 0.5331124374866486
+    },
+    {
+        "partition": "22-27s",
+        "final_emotion": "Neutral",
+        "confidence": 0.3407752513885498
+    },
+    {
+        "partition": "27-28s",
+        "final_emotion": "Neutral",
+        "confidence": 0.34603747725486755
+    }
+]

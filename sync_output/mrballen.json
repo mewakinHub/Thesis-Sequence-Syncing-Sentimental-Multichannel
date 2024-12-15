@@ -1,0 +1,276 @@
+[
+    {
+        "partition": "0-5s",
+        "transcript": {
+            "text": " Mitch was in his final semester at a college in Louisiana when he met another senior, a wonderful",
+            "emotion": "Happy",
+            "confidence": 0.9222910404205322
+        },
+        "facial_expression": [
+            {
+                "frame": "0000.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0001.jpg",
+                "emotion": "Happy",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0002.jpg",
+                "emotion": "Happy",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0003.jpg",
+                "emotion": "Happy",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0004.jpg",
+                "emotion": "Happy",
+                "confidence": 0.18
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "5-6s",
+        "transcript": {
+            "text": " young lady named Kayla.",
+            "emotion": "Neutral",
+            "confidence": 0.3625844120979309
+        },
+        "facial_expression": [
+            {
+                "frame": "0005.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0006.jpg",
+                "emotion": "Happy",
+                "confidence": 0.18
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 5,
+                "emotion": "Neutral",
+                "confidence": 0.7990870475769043
+            }
+        ]
+    },
+    {
+        "partition": "6-9s",
+        "transcript": {
+            "text": " From the instant he saw her, he knew he was in love.",
+            "emotion": "Happy",
+            "confidence": 0.7790312767028809
+        },
+        "facial_expression": [
+            {
+                "frame": "0007.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0008.jpg",
+                "emotion": "Happy",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0009.jpg",
+                "emotion": "Happy",
+                "confidence": 0.17
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "9-13s",
+        "transcript": {
+            "text": " She played hard to get at first, but after several months, he won her over.",
+            "emotion": "Neutral",
+            "confidence": 0.37166377902030945
+        },
+        "facial_expression": [
+            {
+                "frame": "0010.jpg",
+                "emotion": "Fear",
+                "confidence": 0.16
+            },
+            {
+                "frame": "0011.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0012.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0013.jpg",
+                "emotion": "Happy",
+                "confidence": 0.19
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 10,
+                "emotion": "Neutral",
+                "confidence": 0.9688166975975037
+            }
+        ]
+    },
+    {
+        "partition": "13-17s",
+        "transcript": {
+            "text": " After graduation, the pair stayed in Louisiana and moved in together while they got their",
+            "emotion": "Neutral",
+            "confidence": 0.3524860143661499
+        },
+        "facial_expression": [
+            {
+                "frame": "0014.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0015.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0016.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0017.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.16
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 15,
+                "emotion": "Neutral",
+                "confidence": 0.6622216105461121
+            }
+        ]
+    },
+    {
+        "partition": "17-18s",
+        "transcript": {
+            "text": " careers off the ground.",
+            "emotion": "Fear",
+            "confidence": 0.6376789808273315
+        },
+        "facial_expression": [
+            {
+                "frame": "0018.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "18-22s",
+        "transcript": {
+            "text": " Two years later, the pair got married and almost immediately Kayla got pregnant.",
+            "emotion": "Happy",
+            "confidence": 0.9642248749732971
+        },
+        "facial_expression": [
+            {
+                "frame": "0019.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0020.jpg",
+                "emotion": "Happy",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0021.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.16
+            },
+            {
+                "frame": "0022.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 20,
+                "emotion": "Neutral",
+                "confidence": 0.47877374291419983
+            }
+        ]
+    },
+    {
+        "partition": "22-27s",
+        "transcript": {
+            "text": " At the time, Mitch's career was really starting to take off, which allowed Kayla to stay",
+            "emotion": "Neutral",
+            "confidence": 0.6815505027770996
+        },
+        "facial_expression": [
+            {
+                "frame": "0023.jpg",
+                "emotion": "Happy",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0024.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0025.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0026.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0027.jpg",
+                "emotion": "Happy",
+                "confidence": 0.17
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 25,
+                "emotion": "Angry",
+                "confidence": 0.9954394698143005
+            }
+        ]
+    },
+    {
+        "partition": "27-28s",
+        "transcript": {
+            "text": " at home and take some time off.",
+            "emotion": "Neutral",
+            "confidence": 0.6920749545097351
+        },
+        "facial_expression": [
+            {
+                "frame": "0028.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            }
+        ],
+        "voice_tone": []
+    }
+]

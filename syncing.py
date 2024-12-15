@@ -2,9 +2,40 @@ import json
 from collections import defaultdict
 
 # Load data from the files
-file1_path = "facial_expression/FERPlus/data/output/logan_paul_validation.txt"
-file2_path = "voice_tone/output_tone_logan_paul.json"
-file3_path = "voice_transcription/output_transcription_logan_paul.json"
+# Logan paul
+# file1_path = "facial_expression/FERPlus/data/output/logan_paul_validation.txt"
+# file2_path = "voice_tone/output_tone_logan_paul.json"
+# file3_path = "voice_transcription/output_transcription_logan_paul.json"
+
+# Markiplier part 1
+# file1_path = "facial_expression/FERPlus/data/output/markiplier_part1_validation.txt"
+# file2_path = "voice_tone/output_tone_markiplier_part_1.json"
+# file3_path = "voice_transcription/output_transcription_markiplier_part_1.json"
+
+# Markiplier part 2
+# file1_path = "facial_expression/FERPlus/data/output/markiplier_part2_validation.txt"
+# file2_path = "voice_tone/output_tone_markiplier_part_2.json"
+# file3_path = "voice_transcription/output_transcription_markiplier_part_2.json"
+
+# michael_reeves
+# file1_path = "facial_expression/FERPlus/data/output/michael_reeves_validation.txt"
+# file2_path = "voice_tone/output_tone_michael_reeves.json"
+# file3_path = "voice_transcription/output_transcription_michael_reeves.json"
+
+# mrballen
+# file1_path = "facial_expression/FERPlus/data/output/mrballen_validation.txt"
+# file2_path = "voice_tone/output_tone_mrballen.json"
+# file3_path = "voice_transcription/output_transcription_mrballen.json"
+
+# penguinz0
+# file1_path = "facial_expression/FERPlus/data/output/penguinz0_validation.txt"
+# file2_path = "voice_tone/output_tone_penguinz0.json"
+# file3_path = "voice_transcription/output_transcription_penguinz0.json"
+
+# tommyinnit
+file1_path = "facial_expression/FERPlus/data/output/tommyinnit_validation.txt"
+file2_path = "voice_tone/output_tone_tommyinnit.json"
+file3_path = "voice_transcription/output_transcription_tommyinnit.json"
 
 # Read the first file (facial expressions)
 with open(file1_path, "r") as f:

@@ -1,0 +1,22 @@
+[
+    {
+        "partition": "0-5s",
+        "final_emotion": "Happy",
+        "confidence": 0.34612906606573807
+    },
+    {
+        "partition": "5-10s",
+        "final_emotion": "Neutral",
+        "confidence": 0.36141619086265564
+    },
+    {
+        "partition": "10-13s",
+        "final_emotion": "Neutral",
+        "confidence": 0.4203443229198456
+    },
+    {
+        "partition": "13-19s",
+        "final_emotion": "Neutral",
+        "confidence": 0.387
+    }
+]

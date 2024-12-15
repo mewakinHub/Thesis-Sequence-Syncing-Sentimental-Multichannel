@@ -1,0 +1,248 @@
+[
+    {
+        "partition": "0-7s",
+        "transcript": {
+            "text": " and I just wanted to reassure you guys that Markiplier as a channel will continue.",
+            "emotion": "Neutral",
+            "confidence": 0.6356979608535767
+        },
+        "facial_expression": [
+            {
+                "frame": "0000.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.25
+            },
+            {
+                "frame": "0001.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0002.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.24
+            },
+            {
+                "frame": "0003.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            },
+            {
+                "frame": "0004.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0005.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            },
+            {
+                "frame": "0006.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 5,
+                "emotion": "Angry",
+                "confidence": 0.9924671053886414
+            }
+        ]
+    },
+    {
+        "partition": "7-13s",
+        "transcript": {
+            "text": " I really hope that Ryan and Matt will want to continue moving forward with me,",
+            "emotion": "Neutral",
+            "confidence": 0.6744359731674194
+        },
+        "facial_expression": [
+            {
+                "frame": "0007.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0008.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            },
+            {
+                "frame": "0009.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0010.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0011.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0012.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 10,
+                "emotion": "Neutral",
+                "confidence": 0.97267085313797
+            }
+        ]
+    },
+    {
+        "partition": "13-16s",
+        "transcript": {
+            "text": " but it's just going to take a lot of time.",
+            "emotion": "Neutral",
+            "confidence": 0.9377712607383728
+        },
+        "facial_expression": [
+            {
+                "frame": "0013.jpg",
+                "emotion": "Happy",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0014.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0015.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 15,
+                "emotion": "Fear",
+                "confidence": 0.7790317535400391
+            }
+        ]
+    },
+    {
+        "partition": "16-18s",
+        "transcript": {
+            "text": " It's going to take a good bit of time.",
+            "emotion": "Neutral",
+            "confidence": 0.8666340112686157
+        },
+        "facial_expression": [
+            {
+                "frame": "0016.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0017.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "18-24s",
+        "transcript": {
+            "text": " This was a heavy loss that we all feel, and all of you out there probably feel,",
+            "emotion": "Sad",
+            "confidence": 0.9286524057388306
+        },
+        "facial_expression": [
+            {
+                "frame": "0018.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0019.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0020.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0021.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0022.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            },
+            {
+                "frame": "0023.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 20,
+                "emotion": "Happy",
+                "confidence": 0.689663290977478
+            }
+        ]
+    },
+    {
+        "partition": "24-30s",
+        "transcript": {
+            "text": " in small ways that you probably didn't know, Daniel was part of what I did.",
+            "emotion": "Surprise",
+            "confidence": 0.6912227869033813
+        },
+        "facial_expression": [
+            {
+                "frame": "0024.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0025.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0026.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.24
+            },
+            {
+                "frame": "0027.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0028.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            },
+            {
+                "frame": "0029.jpg",
+                "emotion": "Unknown",
+                "confidence": 0.0
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 25,
+                "emotion": "Neutral",
+                "confidence": 0.8349543213844299
+            }
+        ]
+    }
+]

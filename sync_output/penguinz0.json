@@ -1,0 +1,244 @@
+[
+    {
+        "partition": "0-5s",
+        "transcript": {
+            "text": " It can't even be a real soul. There's no way there's a human being that's handling our case. It's not possible.",
+            "emotion": "Neutral",
+            "confidence": 0.6488341689109802
+        },
+        "facial_expression": [
+            {
+                "frame": "0000.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0001.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0002.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0003.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0004.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0005.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 5,
+                "emotion": "Angry",
+                "confidence": 0.993854820728302
+            }
+        ]
+    },
+    {
+        "partition": "5-13s",
+        "transcript": {
+            "text": " Because there is no reason we would keep being declined. They're not even giving us reasons that make any sense at all.",
+            "emotion": "Neutral",
+            "confidence": 0.6739376187324524
+        },
+        "facial_expression": [
+            {
+                "frame": "0006.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            },
+            {
+                "frame": "0007.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0008.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0009.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0010.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.26
+            },
+            {
+                "frame": "0011.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0012.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            },
+            {
+                "frame": "0013.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.23
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 10,
+                "emotion": "Happy",
+                "confidence": 0.9797731637954712
+            }
+        ]
+    },
+    {
+        "partition": "13-15s",
+        "transcript": {
+            "text": " Not to us, not to the lawyers, not to anybody. Nobody.",
+            "emotion": "Neutral",
+            "confidence": 0.6126978993415833
+        },
+        "facial_expression": [
+            {
+                "frame": "0014.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0015.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.24
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 15,
+                "emotion": "Angry",
+                "confidence": 0.9940748810768127
+            }
+        ]
+    },
+    {
+        "partition": "15-20s",
+        "transcript": {
+            "text": " And no other esports team has had this problem. Every other org that has international players got in...",
+            "emotion": "Neutral",
+            "confidence": 0.801749587059021
+        },
+        "facial_expression": [
+            {
+                "frame": "0016.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0017.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0018.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0019.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.22
+            },
+            {
+                "frame": "0020.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.18
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 20,
+                "emotion": "Angry",
+                "confidence": 0.8779547214508057
+            }
+        ]
+    },
+    {
+        "partition": "20-22s",
+        "transcript": {
+            "text": " Look at his split.",
+            "emotion": "Neutral",
+            "confidence": 0.42307108640670776
+        },
+        "facial_expression": [
+            {
+                "frame": "0021.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.21
+            },
+            {
+                "frame": "0022.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.19
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "22-24s",
+        "transcript": {
+            "text": " Fuckin' speed rant.",
+            "emotion": "Angry",
+            "confidence": 0.681426465511322
+        },
+        "facial_expression": [
+            {
+                "frame": "0023.jpg",
+                "emotion": "Happy",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0024.jpg",
+                "emotion": "Happy",
+                "confidence": 0.19
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "24-26s",
+        "transcript": {
+            "text": " Meanwhile, we can't. We literally can't.",
+            "emotion": "Surprise",
+            "confidence": 0.4495246708393097
+        },
+        "facial_expression": [
+            {
+                "frame": "0025.jpg",
+                "emotion": "Happy",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0026.jpg",
+                "emotion": "Surprise",
+                "confidence": 0.2
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 25,
+                "emotion": "Fear",
+                "confidence": 0.8966636061668396
+            }
+        ]
+    }
+]

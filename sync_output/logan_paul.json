@@ -1,0 +1,217 @@
+[
+    {
+        "partition": "0-6s",
+        "transcript": {
+            "text": " So what we came across that day in the woods was obviously unplanned and the reactions you saw on tape were raw. They were unfiltered",
+            "emotion": "Neutral",
+            "confidence": 0.40619438886642456
+        },
+        "facial_expression": [
+            {
+                "frame": "0000.jpg",
+                "emotion": "Sad",
+                "confidence": 0.19
+            },
+            {
+                "frame": "0001.jpg",
+                "emotion": "Sad",
+                "confidence": 0.16
+            },
+            {
+                "frame": "0002.jpg",
+                "emotion": "Sad",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0003.jpg",
+                "emotion": "Sad",
+                "confidence": 0.2
+            },
+            {
+                "frame": "0004.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0005.jpg",
+                "emotion": "Sad",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0006.jpg",
+                "emotion": "Sad",
+                "confidence": 0.16
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 5,
+                "emotion": "Fear",
+                "confidence": 0.5330254435539246
+            }
+        ]
+    },
+    {
+        "partition": "6-10s",
+        "transcript": {
+            "text": " None of us knew how to react",
+            "emotion": "Neutral",
+            "confidence": 0.853630542755127
+        },
+        "facial_expression": [
+            {
+                "frame": "0007.jpg",
+                "emotion": "Sad",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0008.jpg",
+                "emotion": "Sad",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0009.jpg",
+                "emotion": "Sad",
+                "confidence": 0.16
+            },
+            {
+                "frame": "0010.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 10,
+                "emotion": "Fear",
+                "confidence": 0.851924479007721
+            }
+        ]
+    },
+    {
+        "partition": "10-12s",
+        "transcript": {
+            "text": " or how to feel",
+            "emotion": "Sad",
+            "confidence": 0.5896208882331848
+        },
+        "facial_expression": [
+            {
+                "frame": "0011.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0012.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            }
+        ],
+        "voice_tone": []
+    },
+    {
+        "partition": "12-17s",
+        "transcript": {
+            "text": " I should have never posted the video. I should have put the cameras down and",
+            "emotion": "Neutral",
+            "confidence": 0.39425182342529297
+        },
+        "facial_expression": [
+            {
+                "frame": "0013.jpg",
+                "emotion": "Sad",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0014.jpg",
+                "emotion": "Sad",
+                "confidence": 0.16
+            },
+            {
+                "frame": "0015.jpg",
+                "emotion": "Sad",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0016.jpg",
+                "emotion": "Sad",
+                "confidence": 0.18
+            },
+            {
+                "frame": "0017.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 15,
+                "emotion": "Fear",
+                "confidence": 0.8085501790046692
+            }
+        ]
+    },
+    {
+        "partition": "17-21s",
+        "transcript": {
+            "text": " Stopped recording what we were going through",
+            "emotion": "Neutral",
+            "confidence": 0.6228757500648499
+        },
+        "facial_expression": [
+            {
+                "frame": "0018.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0019.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0020.jpg",
+                "emotion": "Sad",
+                "confidence": 0.16
+            },
+            {
+                "frame": "0021.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            }
+        ],
+        "voice_tone": [
+            {
+                "time": 20,
+                "emotion": "Fear",
+                "confidence": 0.9604793787002563
+            }
+        ]
+    },
+    {
+        "partition": "21-24s",
+        "transcript": {
+            "text": " There's a lot of things I should have done differently, but I didn't",
+            "emotion": "Neutral",
+            "confidence": 0.45594078302383423
+        },
+        "facial_expression": [
+            {
+                "frame": "0022.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0023.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            },
+            {
+                "frame": "0024.jpg",
+                "emotion": "Sad",
+                "confidence": 0.17
+            }
+        ],
+        "voice_tone": []
+    }
+]
