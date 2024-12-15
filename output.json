@@ -55,7 +55,7 @@
         "partition": "6-10s",
         "transcript": {
             "text": " None of us knew how to react",
-            "emotion": "Neutral",
+            "emotion": "Sad",
             "confidence": 0.853630542755127
         },
         "facial_expression": [
@@ -92,18 +92,18 @@
         "partition": "10-12s",
         "transcript": {
             "text": " or how to feel",
-            "emotion": "Sad",
+            "emotion": "Happy",
             "confidence": 0.5896208882331848
         },
         "facial_expression": [
             {
                 "frame": "0011.jpg",
-                "emotion": "Sad",
+                "emotion": "Happy",
                 "confidence": 0.17
             },
             {
                 "frame": "0012.jpg",
-                "emotion": "Sad",
+                "emotion": "Happy",
                 "confidence": 0.17
             }
         ],
@@ -113,7 +113,7 @@
         "partition": "12-17s",
         "transcript": {
             "text": " I should have never posted the video. I should have put the cameras down and",
-            "emotion": "Neutral",
+            "emotion": "Sad",
             "confidence": 0.39425182342529297
         },
         "facial_expression": [
@@ -161,17 +161,17 @@
         "facial_expression": [
             {
                 "frame": "0018.jpg",
-                "emotion": "Sad",
+                "emotion": "Neutral",
                 "confidence": 0.17
             },
             {
                 "frame": "0019.jpg",
-                "emotion": "Sad",
+                "emotion": "Neutral",
                 "confidence": 0.17
             },
             {
                 "frame": "0020.jpg",
-                "emotion": "Sad",
+                "emotion": "Neutral",
                 "confidence": 0.16
             },
             {
