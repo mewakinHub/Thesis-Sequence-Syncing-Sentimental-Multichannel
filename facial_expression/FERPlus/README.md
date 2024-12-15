@@ -82,6 +82,21 @@ Use `extract_frames.py` to extract frames from the video:
 ```bash
 python scripts/extract_frames.py --input ../data/input/video.mp4 --output ../data/input/frames/
 ```
+```cmd
+python scripts/extract_frames.py --input "../../input_sample_video/positive (sarcastic) - michael reeves/original clip.mp4" --output data/video_frames/michael_reeves/ --rate 1
+
+python scripts/extract_frames.py --input "../../input_sample_video/positive (happy) - tommyinnit/original clip.mp4" --output data/video_frames/tommyinnit/ --rate 1
+
+python scripts/extract_frames.py --input "../../input_sample_video/neutral - mrballen/original clip.mp4" --output data/video_frames/mrballen/ --rate 1
+
+python scripts/extract_frames.py --input "../../input_sample_video/negative (sad) - markiplier part 1/original clip.mp4" --output data/video_frames/markiplier_part1/ --rate 1
+
+python scripts/extract_frames.py --input "../../input_sample_video/negative (sad) - markiplier part 2/original clip.mp4" --output data/video_frames/markiplier_part2/ --rate 1
+
+python scripts/extract_frames.py --input "../../input_sample_video/negative (sad) - logan paul/original clip.mp4" --output data/video_frames/logan_paul/ --rate 1
+
+python scripts/extract_frames.py --input "../../input_sample_video/negative (angry) - penguinz0/original clip.mp4" --output data/video_frames/penguinz0/ --rate 1
+```
 
 **Input**:
 - `../data/input/video.mp4` (path to your video file).
@@ -156,6 +171,30 @@ python scripts\analyze_emotions_with_validation.py --input data\video_frames\mrb
 python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part1 --output data\output\markiplier_part1_validation.txt --model data\models\1\model.pt
 python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part2 --output data\output\markiplier_part2_validation.txt --model data\models\1\model.pt
 python scripts\analyze_emotions_with_validation.py --input data\video_frames\logan_paul --output data\output\logan_paul_validation.txt --model data\models\1\model.pt
+```
+**Command With Labels File**
+If you don’t have JSON labels, run the following commands:
+
+```cmd
+@echo off
+
+echo model v1
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\penguinz0 --output data\output\penguinz0_validation.txt --model data\models\1\model.pt --labels data\labels\penguinz0.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\michael_reeves --output data\output\michael_reeves_validation.txt --model data\models\1\model.pt --labels data\labels\michael_reeves.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\tommyinnit --output data\output\tommyinnit_validation.txt --model data\models\1\model.pt --labels data\labels\tommyinnit.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\mrballen --output data\output\mrballen_validation.txt --model data\models\1\model.pt --labels data\labels\mrballen.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part1 --output data\output\markiplier_part1_validation.txt --model data\models\1\model.pt --labels data\labels\markiplier_part1.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part2 --output data\output\markiplier_part2_validation.txt --model data\models\1\model.pt --labels data\labels\markiplier_part2.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\logan_paul --output data\output\logan_paul_validation.txt --model data\models\1\model.pt --labels data\labels\logan_paul.json
+
+echo model v2
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\penguinz0 --output data\output\penguinz0_validation.txt --model data\models\2\model.pt --labels data\labels\penguinz0.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\michael_reeves --output data\output\michael_reeves_validation.txt --model data\models\2\model.pt --labels data\labels\michael_reeves.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\tommyinnit --output data\output\tommyinnit_validation.txt --model data\models\2\model.pt --labels data\labels\tommyinnit.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\mrballen --output data\output\mrballen_validation.txt --model data\models\2\model.pt --labels data\labels\mrballen.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part1 --output data\output\markiplier_part1_validation.txt --model data\models\2\model.pt --labels data\labels\markiplier_part1.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\markiplier_part2 --output data\output\markiplier_part2_validation.txt --model data\models\2\model.pt --labels data\labels\markiplier_part2.json
+python scripts\analyze_emotions_with_validation.py --input data\video_frames\logan_paul --output data\output\logan_paul_validation.txt --model data\models\2\model.pt --labels data\labels\logan_paul.json
 ```
 
 ---
