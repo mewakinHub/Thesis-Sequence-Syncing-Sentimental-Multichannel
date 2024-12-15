@@ -1,0 +1,21 @@
+Accuracy: 36.84%
+Image,Ground Truth,Prediction,Confidence,Correct
+frame_0000.jpg,Neutral,Surprise,0.98,False
+frame_0001.jpg,Neutral,Surprise,0.98,False
+frame_0002.jpg,Neutral,Surprise,0.98,False
+frame_0003.jpg,Disgust,Happy,0.93,False
+frame_0004.jpg,Neutral,Happy,0.98,False
+frame_0005.jpg,Happy,Happy,0.98,True
+frame_0006.jpg,Happy,Disgust,0.98,False
+frame_0007.jpg,Happy,Happy,0.98,True
+frame_0008.jpg,Happy,Neutral,0.98,False
+frame_0009.jpg,Happy,Neutral,0.98,False
+frame_0010.jpg,Happy,Happy,0.98,True
+frame_0011.jpg,Happy,Happy,0.98,True
+frame_0012.jpg,Happy,Happy,0.98,True
+frame_0013.jpg,Neutral,Neutral,0.98,True
+frame_0014.jpg,Neutral,Surprise,0.98,False
+frame_0015.jpg,Neutral,Surprise,0.93,False
+frame_0016.jpg,Neutral,Disgust,0.98,False
+frame_0017.jpg,Neutral,Disgust,0.98,False
+frame_0018.jpg,Happy,Happy,0.98,True

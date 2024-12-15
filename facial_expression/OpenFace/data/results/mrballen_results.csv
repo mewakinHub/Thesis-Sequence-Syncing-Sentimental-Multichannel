@@ -1,0 +1,32 @@
+Accuracy: 96.67%
+Image,Ground Truth,Prediction,Confidence,Correct
+frame_0000.jpg,Neutral,Neutral,0.98,True
+frame_0001.jpg,Neutral,Neutral,0.98,True
+frame_0002.jpg,Neutral,Neutral,0.98,True
+frame_0003.jpg,Neutral,Neutral,0.98,True
+frame_0004.jpg,Neutral,Neutral,0.98,True
+frame_0005.jpg,Neutral,Neutral,0.98,True
+frame_0006.jpg,Neutral,Neutral,0.98,True
+frame_0007.jpg,Neutral,Neutral,0.98,True
+frame_0008.jpg,Neutral,Neutral,0.98,True
+frame_0009.jpg,Neutral,Neutral,0.98,True
+frame_0010.jpg,Neutral,Neutral,0.98,True
+frame_0011.jpg,Neutral,Neutral,0.98,True
+frame_0012.jpg,Neutral,Neutral,0.98,True
+frame_0013.jpg,Neutral,Neutral,0.98,True
+frame_0014.jpg,Neutral,Neutral,0.98,True
+frame_0015.jpg,Neutral,Neutral,0.98,True
+frame_0016.jpg,Neutral,Neutral,0.98,True
+frame_0017.jpg,Neutral,Neutral,0.98,True
+frame_0018.jpg,Neutral,Neutral,0.98,True
+frame_0019.jpg,Neutral,Neutral,0.98,True
+frame_0020.jpg,Neutral,Surprise,0.98,False
+frame_0021.jpg,Neutral,Neutral,0.98,True
+frame_0022.jpg,Neutral,Neutral,0.98,True
+frame_0023.jpg,Neutral,Neutral,0.98,True
+frame_0024.jpg,Neutral,Neutral,0.98,True
+frame_0025.jpg,Neutral,Neutral,0.98,True
+frame_0026.jpg,Neutral,Neutral,0.98,True
+frame_0027.jpg,Neutral,Neutral,0.98,True
+frame_0028.jpg,Neutral,Neutral,0.98,True
+frame_0029.jpg,Neutral,Neutral,0.98,True
