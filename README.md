@@ -1,51 +1,58 @@
-# **Multi-Channel Sentiment Analysis with Voting Mechanism** 🎭🎤📝  
-This repository provides an implementation of a **multi-channel sentiment analysis** system that uses **facial expression**, **voice tone**, and **speech transcription** to classify human emotions. By employing a **voting mechanism** instead of traditional multimodal fusion, the system ensures flexibility, transparency, and adaptability to dynamic scenarios.
+# **Multi-Channel Sentiment Analysis System** 🎭🎤📝  
+
+This project implements a multi-channel sentiment analysis system that integrates **facial expressions**, **voice tone**, and **speech transcription** to analyze human emotions. A **voting mechanism** is employed to combine results, offering transparency, modularity, and robustness compared to traditional multimodal systems.
 
 ---
 
-## **Purpose** 📚
-Traditional **single-channel sentiment analysis** and **early fusion multimodal systems** face challenges in handling:
-1. Noise in real-world data.
-2. Conflicts between emotional signals.
-3. Lack of interpretability (e.g., black-box neural networks).
+## **Abstract** 📄  
+This system independently analyzes sentiment across three modalities:
+- **Facial Expressions** (FERPlus, OpenFace)
+- **Voice Tone** (Wav2Vec2 fine-tuned for RAVDESS)
+- **Speech Transcriptions** (DistilRoBERTa for emotion detection)
 
-This project introduces a **post-processing voting mechanism** that:
-- Combines independent outputs from multiple channels.
-- Resolves conflicts with dynamic thresholds and conditions.
-- Enhances interpretability and modularity.
-
-🔗 **Detailed Explanation**:  
-- [Advantages of Voting Mechanism](./docs/advantage.md)  
-- [Facial Expression Analysis](./docs/FacialExpression.md)  
-- [Syncing Mechanism](./docs/syncing.md)  
+A **post-processing voting mechanism** is applied to combine outputs. Unlike black-box neural networks, this approach is interpretable and adaptable, allowing conflict resolution between emotional signals for a more accurate and explainable sentiment classification.
 
 ---
 
-## **Features** 🚀
-1. **Facial Expression Analysis**:
-   - Use models like **Facetorch (FER-like)** and **OpenFace** for static and dynamic frame analysis.
-   - Outputs per-frame emotions with timestamps.  
-   ➡️ [FacialExpression.md](./docs/FacialExpression.md)
+## **System Workflow** 🚀  
+The system processes a video file (30-second segments) and performs the following steps:
 
-2. **Voice Tone Analysis**:
-   - Utilize **Wav2Vec2** models for speech emotion recognition.
-   - Detects vocal emotions such as **Happy, Sad, Angry, Calm, Neutral**.  
+1. **Frame Extraction**:
+   - Convert video into frames at **1-second intervals** for facial expression analysis.  
+     📜 Refer: [FacialExpression.md](./docs/FacialExpression.md)  
 
-3. **Speech Transcription Sentiment**:
-   - Transcribe speech using **Google Speech-to-Text** or **Whisper**.
-   - Analyze sentiment using **DistilRoBERTa** for **positive, negative, and neutral** classifications.
+2. **Speech and Voice Analysis**:
+   - Extract audio for **voice tone** and **speech transcription**.  
 
-4. **Voting Mechanism**:
-   - Combines results from all channels after independent analysis.
-   - Dynamically resolves conflicts and handles edge cases.  
-   ➡️ [Syncing.md](./docs/syncing.md)
+3. **Modality-Specific Analysis**:
+   - **Facial Expression**: Detect frame-level emotions using **Facetorch** or **OpenFace**.
+   - **Voice Tone**: Analyze audio tone with **Wav2Vec2**.
+   - **Speech Transcription**: Sentiment detection using **DistilRoBERTa**.
+
+4. **Syncing and Voting**:
+   - Align outputs across timestamps and apply a weighted **voting mechanism** for final sentiment classification.  
+     📜 Refer: [syncing.md](./docs/syncing.md)  
 
 ---
+
+## **Voting Mechanism** 🗳️  
+The **voting mechanism** assigns dynamic weights to each channel based on their reliability and context:  
+
+| **Modality**            | **Weight** | **Reason**                                                 |
+|--------------------------|------------|-----------------------------------------------------------|
+| **Speech Transcription** | 0.5        | Clear, context-rich emotional cues.                       |
+| **Facial Expression**    | 0.3        | Universally understood cues; reliable for static data.    |
+| **Voice Tone**           | 0.2        | Prone to ambiguity; complementary to other channels.      |
+
+**Conflict Resolution**:
+- **Positive vs Negative Conflict**: Adjust weights proportionally to conflict ratio.
+- **Inter-Chunk Outlier Handling**: Replace short, transient emotion states with "Neutral" for smoother sequences.  
+  📜 Refer: [inter-chunk.md](./docs/inter-chunk.md).
+
+---
+
 
 ## **Project Structure** 📂
-
-
-
 ```
 THESIS-SEQUENCE-SYNCING-SYSTEM/
 ├── docs/                        # Documentation
@@ -120,117 +127,84 @@ THESIS-SEQUENCE-SYNCING-SYSTEM/
 └── voting.py                    # Voting Mechanism Script
 ```
 
----
-
-## **Installation** ⚙️
-
-1. **Clone the Repository**:
+## **Installation** ⚙️  
+1. **Clone Repository**:
    ```bash
    git clone https://github.com/your_project_repo.git
    cd your_project_repo
    ```
 
-2. **Set Up Environment**:
+2. **Setup Environment**:
    ```bash
    conda create -n sentiment_env python=3.9 -y
    conda activate sentiment_env
    pip install -r requirements.txt
    ```
 
-3. **Install OpenFace and Facetorch**:
-   Follow the guides in [FacialExpression.md](./docs/FacialExpression.md).
+3. **Install Dependencies**:
+   - For **Facial Analysis**: Follow instructions in [FERPlus README](./facial_expression/FERPlus/README.md).
+   - For **OpenFace**: Refer to [OpenFace Installation](./facial_expression/OpenFace/README.md).
 
 ---
 
 ## **How to Run** ▶️
 
-1. **Extract Frames for Facial Analysis**:
+1. **Preprocess Video**:
    ```bash
-   python scripts/extract_frames.py --input ./input_sample_video/video.mp4 --output ./data/frames/
+   python scripts/extract_frames.py --input input_sample_video/video.mp4 --output data/frames/
    ```
 
-2. **Run Facial, Voice, and Text Analysis**:
-   - **Facial Expression**:
+2. **Run Individual Channels**:
+   - Facial Expression Analysis:
      ```bash
-     python scripts/analyze_openface.py --input ./data/frames/ --output ./data/outputs/facial_results.json
+     python facial_expression/FERPlus/scripts/analyze_openface.py --input data/frames/ --output data/outputs/facial.json
      ```
-   - **Voice Tone**:
+   - Voice Tone Analysis:
      ```bash
-     python voice_tone/analyze_tone.py --input ./input_sample_video/video.mp4 --output ./data/outputs/voice_results.json
+     python voice_tone/analyze_tone.py --input input_sample_video/video.mp4 --output data/outputs/voice.json
      ```
-   - **Speech Transcription**:
+   - Speech Transcription Analysis:
      ```bash
-     python voice_transcription/analyze_transcript.py --input ./input_sample_video/video.mp4 --output ./data/outputs/transcript_results.json
+     python voice_transcription/analyze_transcript.py --input input_sample_video/video.mp4 --output data/outputs/transcript.json
      ```
 
-3. **Run the Voting Mechanism**:
+3. **Combine Results Using Voting**:
    ```bash
-   python scripts/voting.py --facial ./data/outputs/facial_results.json \
-                            --voice ./data/outputs/voice_results.json \
-                            --transcript ./data/outputs/transcript_results.json \
-                            --output ./data/results/final_sentiment.json
+   python scripts/voting.py --facial data/outputs/facial.json \
+                            --voice data/outputs/voice.json \
+                            --transcript data/outputs/transcript.json \
+                            --output data/results/final.json
    ```
 
-4. **Review Results**:
-   The final sentiment results will be saved in `./data/results/final_sentiment.json`.
+---
+
+## **Future Work** 🔮  
+The method demonstrates improvements over single-channel approaches but has room for enhancements:
+1. **Sarcastic Detection**: Analyze **contradictory cues** like happy expressions with angry tone.
+2. **Hidden Sadness**: Combine subtle signals (neutral expression, sad voice tone) to detect layered emotions.
+3. **Real-Time Processing**: Adapt the system for live-streamed video analysis.
 
 ---
 
-## **Results** 📊
+## **Results** 📊  
+- The system outputs a JSON file with final sentiment classification for each time partition:  
+  ```json
+  [
+      {"partition": "0-6s", "emotion": "Neutral", "confidence": 0.82},
+      {"partition": "6-12s", "emotion": "Happy", "confidence": 0.91}
+  ]
+  ```
 
-Sample Output:
-```json
-[
-    {
-        "partition": "0-6s",
-        "final_emotion": "Neutral",
-        "confidence": 0.85
-    },
-    {
-        "partition": "6-12s",
-        "final_emotion": "Happy",
-        "confidence": 0.92
-    },
-    {
-        "partition": "12-18s",
-        "final_emotion": "Conflicted",
-        "confidence": 0.45
-    }
-]
-```
+- Comparative analysis with single-channel approaches shows improved accuracy, particularly in ambiguous and noisy contexts.  
+📜 Full evaluation: [CN3-DES400.pdf](./docs/CN3-DES400.pdf)
 
 ---
 
-## **Advantages** 🏆  
-1. **Flexibility**: Easily replace or update models for each channel.  
-2. **Noise Tolerance**: Filters inconsistent results using thresholds and stability conditions.  
-3. **Modular Design**: Each channel operates independently, improving scalability.  
-4. **Transparency**: Enhances interpretability compared to black-box neural networks.
-
-➡️ **More Details**: [Advantages of Voting](./docs/advantage.md)
+## **References** 📚  
+- Final Report: [CN3-DES400.pdf](./docs/CN3-DES400.pdf)  
+- Syncing Logic: [syncing.md](./docs/syncing.md)  
+- Facial Expression: [FacialExpression.md](./docs/FacialExpression.md)
 
 ---
 
-## **Future Work** 🔮
-- **Real-Time Processing**: Extend for live video inputs.  
-- **Advanced Conflict Resolution**: Handle sarcastic and mixed emotions.  
-- **Improved Accuracy**: Fine-tune models with real-world emotional datasets.
-
----
-
-## **Contributing** 🤝
-Feel free to fork, raise issues, or contribute to this project.  
-Refer to the guidelines in [CONTRIBUTING.md](./CONTRIBUTING.md).
-
----
-
-## **References** 📚
-1. **Thesis Report**: [Full Report](./docs/CN3-DES400.pdf)  
-2. **Facial Analysis**: [FacialExpression.md](./docs/FacialExpression.md)  
-3. **Syncing Logic**: [Syncing.md](./docs/syncing.md)
-
----
-
-## **License** 📄
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
+Let me know if you'd like additional sections or refinements! 🚀
